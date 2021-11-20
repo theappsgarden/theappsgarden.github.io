@@ -1,0 +1,21 @@
+
+@media only screen and (max-width: 728px) { 
+	.jumbotron h1 {font-size: 50px;}
+	.btn-custom {font-size: 15px; margin-bottom: 40px;}
+	footer {text-align: center; padding-bottom: 10px; padding-top: 20px;}
+	small {font-size: 10px;}
+	section {padding-top: 50px; height:auto;}
+	section h2 {font-size: 26px; padding-bottom: 40px;}
+	.wedo-img {width: 40%;}
+	ul {padding-bottom: 40px;}
+	.section-b {height:auto;}
+	.mission-text {font-size: 20px; padding-bottom: 20px;}
+	.team {height: auto;}
+	.team-img {width: 42%}
+	.copyright {text-align: center;}
+	.jumbotron {background-image: none; background-color: #f3f4f5; background-size: cover; padding-top: 50px; margin-bottom: 0px;}
+	.thumbnail {height: auto;}
+	.section-c {height: auto;}
+	.portfolio .btn-custom {width: 100%;}
+	.btn-alternative {margin-top: 60px !important;}
+}

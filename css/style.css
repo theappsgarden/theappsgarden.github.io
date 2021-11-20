@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.button {
+  z-index: 99;
+  position: absolute;
+  width: 7%;
+  top: 13%;
+  left: 93%;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  transition: all 0.25s cubic-bezier(.7, .11, .32, 2);
+  background-color: #2aae86;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+.button-container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.button-container:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+body {
+  /*font-family: 'Montserrat', sans-serif;*/
+}
+
+.jumbotron {
+  background-image: url("../images/breather2.png");
+  background-size: cover;
+  padding-top: 50px;
+  margin-bottom: 0px;
+}
+
+.jumbotron h2 {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14pt;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.jumbotron h1 {
+  color: #2aae86;
+  font-style: oblique;
+  font-weight: bold;
+  width: 75%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  font-size: 65px;
+  line-height: 1.2em;
+}
+
+.jumbotron p {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  padding-bottom: 30px;
+  width: 65%;
+}
+
+hr {
+  border-top-color: #d5d6d7;
+  width: 70%;
+  padding-bottom: 15px;
+}
+
+.jumbotron h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #000;
+  padding-bottom: 20px;
+}
+
+.btn-custom {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background-color: #2aae86;
+  padding: 20px;
+  text-overflow: ellipsis;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.btn-custom:hover {
+  color: #fff;
+}
+
+.btn-alternative {
+  background-color: #f0f1f3;
+  color: #2aae86;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.btn-alternative:hover {
+  color: #2aae86;
+}
+
+.section-c {
+  padding-top: 50px;
+  color: #4d4d4f;
+  height: 1020px;
+  background-color: #f3f4f5;
+}
+
+section {
+  height: 620px;
+  padding-top: 80px;
+  color: #4d4d4f;
+}
+
+.section-a {
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+
+section h2 {
+  padding-bottom: 70px;
+}
+
+.section-a i {
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+.section-b {
+  background-color: #fff;
+  color: #4d4d4f;
+  height: 570px;
+}
+
+.team-img {
+  width:65%;
+}
+
+.team {
+  height: 680px;
+  padding-top: 50px;
+}
+
+.wedo-img {
+  width: 48%;
+}
+
+.mission-text {
+  font-style: oblique;
+  font-size: 22px;
+  font-weight: 300;
+  width: 85%;
+  line-height: 1.6;
+}
+
+.project-square {
+  padding: 0px;
+}
+
+.thumbnail {
+  border: none;
+  padding: 0px;
+  height: 300px;
+}
+
+.project-square .thumbnail:hover {
+  opacity: 1;
+}
+
+.projects-img {
+  opacity: 1;
+}
+
+.projects-img:hover {
+  opacity: 0.8;
+}
+
+.thumbnail:hover .projects-img {
+  opacity: 0.8;
+}
+
+.thumbnail h2 { 
+   position: absolute; 
+   left: 0; 
+   width: 100%; 
+   color: #fff;
+   display: none;
+   font-size: 58px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: bold;
+}
+
+.thumbnail h2 span{ 
+   font-size: 42px;
+}
+
+.thumbnail:hover h2 { 
+   display: block;
+}
+
+#dimai-text {
+  top: 60px;
+}
+
+#manitas-text {
+  top: 360px;
+}
+
+#griti-text {
+  top: 360px;
+}
+
+#medicsen-text {
+  top: 60px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-weight: 300;
+}
+
+footer{
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background-color: #4d4d4f;
+  color: #a5a5a6;
+}
+
+.email-contact, .email-contact:hover {
+  color: #a5a5a6;
+}
+
+footer small {
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer .fa {
+  font-size: 26px;
+  margin-right: 10px;
+  margin-top: 20px;
+  color: #a5a5a6;
+}
+
+.copyright {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.tag-icon {
+  margin-bottom: 20px;
+}
+
+.lang-link {
+  color: #a5a5a6;
+}
+
+.row-alt {
+  background-color: #f3f4f5;
+}
+
+.portfolio h1 {
+  margin-top: 100px;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.portfolio .row {
+  padding: 10px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+
+.portfolio h4 {
+  font-size: 26px;
+}
+
+.portfolio p {
+  font-size: 16px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.portfolio .btn-custom {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.portfolio .row-last {
+  margin-bottom: 0px;
+}
