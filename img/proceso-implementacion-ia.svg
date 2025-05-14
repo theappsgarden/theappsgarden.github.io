@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240">
+  <!-- Background -->
+  <rect width="800" height="240" fill="#ffffff" rx="8" ry="8"/>
+  
+  <!-- Simple Process Steps -->
+  
+  <!-- Step 1 -->
+  <g transform="translate(100, 100)">
+    <circle cx="0" cy="0" r="35" fill="#2aae86" opacity="0.9"/>
+    <text x="0" y="0" font-family="monospace" font-size="24" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">1</text>
+    <text x="0" y="55" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">Investigación</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#999999" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="250,95 260,100 250,105" fill="#999999"/>
+  
+  <!-- Step 2 -->
+  <g transform="translate(300, 100)">
+    <circle cx="0" cy="0" r="35" fill="#2aae86" opacity="0.9"/>
+    <text x="0" y="0" font-family="monospace" font-size="24" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">2</text>
+    <text x="0" y="55" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">Diseño</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#999999" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="450,95 460,100 450,105" fill="#999999"/>
+  
+  <!-- Step 3 -->
+  <g transform="translate(500, 100)">
+    <circle cx="0" cy="0" r="35" fill="#2aae86" opacity="0.9"/>
+    <text x="0" y="0" font-family="monospace" font-size="24" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">3</text>
+    <text x="0" y="55" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">Desarrollo</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <line x1="550" y1="100" x2="650" y2="100" stroke="#999999" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="650,95 660,100 650,105" fill="#999999"/>
+  
+  <!-- Step 4 -->
+  <g transform="translate(700, 100)">
+    <circle cx="0" cy="0" r="35" fill="#2aae86" opacity="0.9"/>
+    <text x="0" y="0" font-family="monospace" font-size="24" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">4</text>
+    <text x="0" y="55" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">Optimización</text>
+  </g>
+  
+  <!-- Continuous Improvement Path -->
+  <path d="M 100 165 L 100 180 L 700 180 L 700 165" fill="none" stroke="#555555" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="400" y="210" font-family="monospace" font-size="14" text-anchor="middle" fill="#555555">Ciclo de Mejora Continua</text>
+  
+  <!-- Arrow for cycle - shortened and moved down to avoid overlap -->
+  <polygon points="105,165 100,160 95,165" fill="#555555"/>
+</svg>
