@@ -1,0 +1,68 @@
+@media screen and (max-width: 40em) {
+  .grid-row {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .grid-column,
+  .span-12, .span-whole,
+  .span-6, .span-half,
+  .span-4, .span-one-third,
+  .span-8, .span-two-thirds,
+  .span-3, .span-one-fourth,
+  .span-two-fourths,
+  .span-9, .span-three-fourths,
+  .span-one-fifth,
+  .span-two-fifths,
+  .span-three-fifths,
+  .span-four-fifths,
+  .span-1, .span-2, .span-5, .span-7, .span-10, .span-11 {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .navbar-toggle {
+    display: inline-block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #2aae86;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+  }
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    background: #fff;
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 7px;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+  }
+  .navbar-links.open {
+    display: flex;
+  }
+  .navbar-links a {
+    margin: 0.5rem 0 0.5rem 0;
+    width: 100%;
+    text-align: right;
+  }
+  /* Hide the default nav bar links on mobile */
+  nav[role="navigation"] .navbar-links {
+    display: none;
+  }
+  header nav {
+    display: none !important;
+  }
+} 
