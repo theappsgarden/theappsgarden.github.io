@@ -4,7 +4,7 @@
     <loc>https://theappsgarden.com/</loc>
   </url>
   <url>
-    <loc>https://theappsgarden.com/services.html</loc>
+    <loc>https://theappsgarden.com/index.html</loc>
   </url>
   <url>
     <loc>https://theappsgarden.com/en/index.html</loc>
@@ -13,13 +13,34 @@
     <loc>https://theappsgarden.com/en/services.html</loc>
   </url>
   <url>
+    <loc>https://theappsgarden.com/en/products.html</loc>
+  </url>
+  <url>
+    <loc>https://theappsgarden.com/en/products/blog-content-manager.html</loc>
+  </url>
+  <url>
     <loc>https://theappsgarden.com/en/blog/index.html</loc>
+  </url>
+  <url>
+    <loc>https://theappsgarden.com/en/blog/articles/20250529-article.html</loc>
+  </url>
+  <url>
+    <loc>https://theappsgarden.com/en/blog/articles/20250523-article.html</loc>
+  </url>
+  <url>
+    <loc>https://theappsgarden.com/en/blog/articles/20250519-article.html</loc>
   </url>
   <url>
     <loc>https://theappsgarden.com/es/index.html</loc>
   </url>
   <url>
     <loc>https://theappsgarden.com/es/services.html</loc>
+  </url>
+  <url>
+    <loc>https://theappsgarden.com/es/products.html</loc>
+  </url>
+  <url>
+    <loc>https://theappsgarden.com/es/products/blog-content-manager.html</loc>
   </url>
   <url>
     <loc>https://theappsgarden.com/es/blog/index.html</loc>
@@ -29,6 +50,12 @@
   </url>
   <url>
     <loc>https://theappsgarden.com/cat/services.html</loc>
+  </url>
+  <url>
+    <loc>https://theappsgarden.com/cat/products.html</loc>
+  </url>
+  <url>
+    <loc>https://theappsgarden.com/cat/products/blog-content-manager.html</loc>
   </url>
   <url>
     <loc>https://theappsgarden.com/cat/blog/index.html</loc>
