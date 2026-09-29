@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" role="img" aria-labelledby="title">
+  <title id="title">Product video creation illustration</title>
+  <defs>
+    <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffefa"/><stop offset="1" stop-color="#e8f3eb"/></linearGradient>
+    <linearGradient id="spine" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#b9d4c7"/><stop offset="1" stop-color="#ecf5ef"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="180%"><feDropShadow dx="10" dy="19" stdDeviation="16" flood-color="#173b30" flood-opacity=".18"/></filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M76 85 129 64 418 91 418 404 365 428 76 401Z" fill="url(#spine)" stroke="#0b8069" stroke-width="2"/>
+    <path d="M129 64 418 91 418 404 129 377Z" fill="url(#cover)" stroke="#0b8069" stroke-width="2"/>
+    <path d="M76 85 129 64 129 377 76 401Z" fill="url(#spine)" stroke="#0b8069" stroke-width="2"/>
+    <path d="M144 83 403 107M91 102l24-9" stroke="#58a58f" stroke-width="2" opacity=".7"/>
+    <rect x="159" y="137" width="230" height="160" rx="13" fill="#0e332a"/>
+    <rect x="173" y="150" width="202" height="132" rx="7" fill="#cceada"/>
+    <path d="M173 244c42-53 78-55 117-22 30 26 52 23 85-8v68H173Z" fill="#84cbb0"/>
+    <path d="M173 257c39-25 64-30 99-10 30 18 66 15 103-8v43H173Z" fill="#39a783"/>
+    <circle cx="274" cy="207" r="37" fill="#fffefa" opacity=".94"/>
+    <path d="m263 186 30 21-30 21Z" fill="#087e67"/>
+    <rect x="159" y="313" width="230" height="45" rx="8" fill="#fffefa" stroke="#98c8b5" stroke-width="2"/>
+    <path d="M171 335h196" stroke="#cae4d6" stroke-width="5" stroke-linecap="round"/>
+    <path d="M171 335h113" stroke="#087e67" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="284" cy="335" r="8" fill="#087e67"/>
+    <path d="M93 135v38m0 12v76m0 46v62" stroke="#087e67" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+  </g>
+  <circle cx="410" cy="74" r="12" fill="#8acdb0"/>
+  <path d="m445 135 15-15m-15 0 15 15" stroke="#087e67" stroke-width="4" stroke-linecap="round"/>
+</svg>

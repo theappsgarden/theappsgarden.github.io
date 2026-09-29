@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" role="img" aria-labelledby="title">
+  <title id="title">Social presence agents illustration</title>
+  <defs>
+    <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffefa"/><stop offset="1" stop-color="#e9f4ec"/></linearGradient>
+    <linearGradient id="spine" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#b9d4c7"/><stop offset="1" stop-color="#ecf5ef"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="180%"><feDropShadow dx="10" dy="19" stdDeviation="16" flood-color="#173b30" flood-opacity=".18"/></filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M76 85 129 64 418 91 418 404 365 428 76 401Z" fill="url(#spine)" stroke="#0b8069" stroke-width="2"/>
+    <path d="M129 64 418 91 418 404 129 377Z" fill="url(#cover)" stroke="#0b8069" stroke-width="2"/>
+    <path d="M76 85 129 64 129 377 76 401Z" fill="url(#spine)" stroke="#0b8069" stroke-width="2"/>
+    <path d="M144 83 403 107M91 102l24-9" stroke="#58a58f" stroke-width="2" opacity=".7"/>
+    <rect x="157" y="133" width="228" height="202" rx="12" fill="#fffefa" stroke="#99cbb7" stroke-width="2"/>
+    <circle cx="191" cy="171" r="18" fill="#0d8068"/>
+    <circle cx="191" cy="166" r="6" fill="#eaf4ee"/>
+    <path d="M180 180c2-7 20-7 22 0" fill="none" stroke="#eaf4ee" stroke-width="4" stroke-linecap="round"/>
+    <path d="M223 160h105m-105 14h83" stroke="#a4c9b6" stroke-width="6" stroke-linecap="round"/>
+    <path d="M174 213h174m-174 15h157" stroke="#c8ddcf" stroke-width="6" stroke-linecap="round"/>
+    <rect x="174" y="246" width="194" height="54" rx="8" fill="#ddf0e5"/>
+    <path d="m188 282 35-19 30 11 28-15 31 6 40-20" fill="none" stroke="#087e67" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="223" cy="263" r="5" fill="#087e67"/><circle cx="281" cy="259" r="5" fill="#087e67"/><circle cx="352" cy="245" r="5" fill="#087e67"/>
+    <path d="M178 318h87m14 0h37" stroke="#a4c9b6" stroke-width="5" stroke-linecap="round"/>
+    <path d="M93 135v38m0 12v76m0 46v62" stroke="#087e67" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+  </g>
+  <circle cx="410" cy="74" r="12" fill="#8acdb0"/>
+  <path d="m445 135 15-15m-15 0 15 15" stroke="#087e67" stroke-width="4" stroke-linecap="round"/>
+</svg>
