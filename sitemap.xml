@@ -4,9 +4,6 @@
     <loc>https://theappsgarden.com/</loc>
   </url>
   <url>
-    <loc>https://theappsgarden.com/index.html</loc>
-  </url>
-  <url>
     <loc>https://theappsgarden.com/en/index.html</loc>
   </url>
   <url>
@@ -19,16 +16,10 @@
     <loc>https://theappsgarden.com/en/products/blog-content-manager.html</loc>
   </url>
   <url>
-    <loc>https://theappsgarden.com/en/blog/index.html</loc>
+    <loc>https://theappsgarden.com/en/products/product-videos.html</loc>
   </url>
   <url>
-    <loc>https://theappsgarden.com/en/blog/articles/20250529-article.html</loc>
-  </url>
-  <url>
-    <loc>https://theappsgarden.com/en/blog/articles/20250523-article.html</loc>
-  </url>
-  <url>
-    <loc>https://theappsgarden.com/en/blog/articles/20250519-article.html</loc>
+    <loc>https://theappsgarden.com/en/products/social-presence-agents.html</loc>
   </url>
   <url>
     <loc>https://theappsgarden.com/es/index.html</loc>
@@ -43,7 +34,10 @@
     <loc>https://theappsgarden.com/es/products/blog-content-manager.html</loc>
   </url>
   <url>
-    <loc>https://theappsgarden.com/es/blog/index.html</loc>
+    <loc>https://theappsgarden.com/es/products/product-videos.html</loc>
+  </url>
+  <url>
+    <loc>https://theappsgarden.com/es/products/social-presence-agents.html</loc>
   </url>
   <url>
     <loc>https://theappsgarden.com/cat/index.html</loc>
@@ -58,6 +52,9 @@
     <loc>https://theappsgarden.com/cat/products/blog-content-manager.html</loc>
   </url>
   <url>
-    <loc>https://theappsgarden.com/cat/blog/index.html</loc>
+    <loc>https://theappsgarden.com/cat/products/product-videos.html</loc>
+  </url>
+  <url>
+    <loc>https://theappsgarden.com/cat/products/social-presence-agents.html</loc>
   </url>
 </urlset> 
