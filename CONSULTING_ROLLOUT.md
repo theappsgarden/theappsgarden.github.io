@@ -21,7 +21,7 @@ Based on both `Pack-web-Consultoria-IA.md` and the matching 16-page PDF (22 Octo
 - FUNDAE eligibility and legal training-compliance claims are not advertised without verification.
 - Proposed 50/50 payment terms and 30-day post-implementation support are not presented as agreed commitments.
 - Supply the booking calendar or a production form endpoint to replace the email handoff. Only a confirmed successful submission should show the proposed receipt/24-business-hour response message.
-- Supply approved partner names, roles, photos, quotes and LinkedIn profiles, plus city and legal/privacy text. No invented biographies, location, tool counts or testimonials are published.
+- The About pages now include all four team members' public names, local portraits, short professional backgrounds and LinkedIn links. Sources and retrieval limits are recorded in `img/team/SOURCES.md`. Confirm formal roles at The Apps Garden and obtain each member's approval of the summaries; no company titles or personal quotations were invented. City and legal/privacy text remain outstanding.
 - The full Study questionnaire, NDA workflow, interview guide and savings calculations are private delivery materials, not public lead forms. Set up Tally/Typeform separately after selecting the provider, privacy terms and access controls.
 - Sample reports, case studies, legal documents, newsletters, directories, sector landing pages, lead tests and other growth ideas need separate content or configuration; the pack describes them as future ideas rather than completed assets.
 
