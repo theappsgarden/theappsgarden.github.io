@@ -1,0 +1,44 @@
+# AI consultancy website rollout
+
+Based on both `Pack-web-Consultoria-IA.md` and the matching 16-page PDF (22 October 2026).
+
+## Implemented
+
+- Spanish root and Spanish, English and Catalan home pages: positioning, five services, visible Study pricing, method, team introduction, differentiators, use cases, FAQs and meeting request.
+- Localized services pages: scope, exclusions, client inputs, Study deliverables and phases, private questionnaire overview, implementation, Radar billing options and four workshops.
+- Localized About pages, language switching, metadata and sitemap entries.
+- Shared responsive styles and a dependency-free email-request form. No form data is stored by the form or posted to a server. The visitor must send the prepared email; opening an email client is not confirmation of receipt.
+- Existing products, articles, imagery and social links remain available.
+- Public contact links, footers, article templates and meeting requests use `team@theappsgarden.com` across all languages. Individual team email addresses are not published.
+- Shared Spanish, English and Catalan cookie controls block Google Analytics and Chatbase until explicit consent, with equally styled accept/reject actions, separate unchecked categories and an always-available preferences button. The panel includes provider information and privacy links. A cookie panel does not replace the site's legal notice or full privacy information.
+
+## Decisions and launch dependencies
+
+- The pack requests Spanish only; the implementation follows the explicit request for all three existing languages.
+- Study delivery is consistently stated as 2–3 weeks after the completed questionnaire, following the detailed service specification rather than the conflicting 1–3-week FAQ.
+- Study tiers follow the written table: €1,500 up to 50 people, €3,500 for 51–125, €6,000 from 126. Confirm the final threshold: the pack itself flags it as unresolved.
+- Confirm workshop prices before publishing them. The proposed €600/€400 amounts are not advertised as agreed prices.
+- FUNDAE eligibility and legal training-compliance claims are not advertised without verification.
+- Proposed 50/50 payment terms and 30-day post-implementation support are not presented as agreed commitments.
+- Supply the booking calendar or a production form endpoint to replace the email handoff. Only a confirmed successful submission should show the proposed receipt/24-business-hour response message.
+- The About pages now include all four team members' public names, local portraits, short professional backgrounds and LinkedIn links. Sources and retrieval limits are recorded in `img/team/SOURCES.md`. The site owner confirmed that all four are AI consultants: Adrià Martín Torrens and Damián Martínez Carmona cover the technical area; Adrià Gutiérrez Martínez and Guillem Gutierrez Martinez cover operations. These roles are published in all three languages. Each member's approval of the summaries remains outstanding; no personal quotations were invented. City and legal/privacy text remain outstanding.
+- The full Study questionnaire, NDA workflow, interview guide and savings calculations are private delivery materials, not public lead forms. Set up Tally/Typeform separately after selecting the provider, privacy terms and access controls.
+- Sample reports, case studies, legal documents, newsletters, directories, sector landing pages, lead tests and other growth ideas need separate content or configuration; the pack describes them as future ideas rather than completed assets.
+
+## Cookie consent
+
+- Preferences are stored under `tag-cookie-consent-v1` in local storage for 180 days. Missing, invalid, expired or inaccessible storage defaults to no optional services. Necessary preference storage is not used for analytics.
+- Google Analytics and Chatbase load independently only for accepted categories. Google Analytics cookies are configured to expire after 180 days without automatic renewal.
+- Withdrawal reloads the page to unload accepted scripts and clears readable first-party storage matching the services' known prefixes, including GA cookies at accessible domain/path scopes. Other tabs reload when a previously active service is rejected. Data already sent, third-party storage and HttpOnly cookies cannot be deleted by this control.
+- With browser storage blocked, choices apply only to the current page, with an explicit message. Closing the panel or pressing Escape does not grant consent.
+- Bump the consent version/key and update disclosures before materially changing services or purposes. Review actual vendor storage, contractual terms and transfers before claiming full compliance.
+
+### Consent validation
+
+Chromium checks covered all 36 HTML pages with third-party requests intercepted: none were attempted before consent or after rejection. Vendor scripts were stubbed for deterministic tests; this validates gating rather than vendor internals. Tested separate Analytics/chat grants, accept all, persistence, withdrawal/reload, scoped cookie and storage cleanup, cross-tab withdrawal, invalid/expired/future records and blocked browser storage. Reviewed equal accept/reject actions, keyboard dismissal, translations and layouts at 1440, 768, 390 and 320 pixels.
+
+Manual check: in a fresh browser profile open any page, verify no requests to Google Analytics or Chatbase in the Network panel, then test each category separately. Reopen preferences using the fixed button, reject all and verify that neither service is loaded after the reload.
+
+## Validation
+
+Checked the 10 changed/new public pages in Chromium at 1440, 768, 390 and 320 pixels: no horizontal overflow, visible navigation and working mobile menus. Checked local asset/navigation paths, fragment targets, unique IDs, language links, metadata and new sitemap URLs. Tested required form fields and URL-encoded email handoff. Temporary test tooling lives outside the repository; no runtime dependency or build step was added.
