@@ -1,4 +1,33 @@
 /* Layout changes for the shared static site; no JavaScript required for navigation. */
+.site .consulting-page section[id] { scroll-margin-top: 110px; }
+.site .consulting-page .service-price { font-weight: 700; color: var(--green); margin-top: 20px; }
+.site .consulting-page .section > .container > h2 { margin-bottom: 28px; }
+.site .consulting-page .section > .container > .lead { margin-bottom: 32px; }
+.site .consulting-page .feature-card h3 { margin-top: 0; }
+.site .consulting-page .feature-card { min-height: 0; }
+.site .consulting-page .section ul { padding-left: 24px; max-width: 80ch; }
+.site .consulting-page .section li { margin-bottom: 12px; }
+.site .consulting-page .section > .container > h3 { margin-top: 32px; margin-bottom: 12px; }
+.site .consulting-page .section > .container > p { max-width: 80ch; }
+.site .pricing-table { width: 100%; max-width: 720px; border-collapse: collapse; margin: 32px 0; }
+.site .pricing-table caption { text-align: left; font-weight: 700; margin-bottom: 12px; }
+.site .pricing-table th, .site .pricing-table td { text-align: left; padding: 16px 12px; border-bottom: 1px solid var(--line); }
+.site .study-phases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 48px; padding-left: 24px; }
+.site .meeting-request { max-width: 850px; margin: 24px 0; }
+.site .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.site .contact-field { min-width: 0; }
+.site .contact-field:last-child { grid-column: 1 / -1; }
+.site .contact-field label { display: block; font-weight: 600; margin-bottom: 8px; }
+.site .contact-field input, .site .contact-field select, .site .contact-field textarea { width: 100%; min-height: 48px; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: #173e33; font: inherit; }
+.site .contact-field textarea { resize: vertical; }
+.site .meeting-request > p { margin: 20px 0; }
+.site .meeting-request button { cursor: pointer; font: inherit; white-space: normal; }
+.site .contact-field :focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .site .contact-grid, .site .study-phases { grid-template-columns: 1fr; }
+  .site .consulting-page .btn { white-space: normal; text-align: center; }
+  .site .pricing-table th, .site .pricing-table td { padding: 12px 8px; }
+}
 @media (max-width: 900px) {
   .site .desktop-nav, .site .header-actions { display: none; }
   .site .header-inner { min-height: 76px; }
