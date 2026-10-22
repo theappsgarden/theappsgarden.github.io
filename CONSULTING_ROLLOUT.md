@@ -10,6 +10,7 @@ Based on both `Pack-web-Consultoria-IA.md` and the matching 16-page PDF (22 Octo
 - Shared responsive styles and a dependency-free email-request form. No form data is stored by the form or posted to a server. The visitor must send the prepared email; opening an email client is not confirmation of receipt.
 - Existing products, articles, imagery and social links remain available.
 - Public contact links, footers, article templates and meeting requests use `team@theappsgarden.com` across all languages. Individual team email addresses are not published.
+- Shared Spanish, English and Catalan cookie controls block Google Analytics and Chatbase until explicit consent, with equally styled accept/reject actions, separate unchecked categories and an always-available preferences button. The panel includes provider information and privacy links. A cookie panel does not replace the site's legal notice or full privacy information.
 
 ## Decisions and launch dependencies
 
@@ -23,6 +24,20 @@ Based on both `Pack-web-Consultoria-IA.md` and the matching 16-page PDF (22 Octo
 - Supply approved partner names, roles, photos, quotes and LinkedIn profiles, plus city and legal/privacy text. No invented biographies, location, tool counts or testimonials are published.
 - The full Study questionnaire, NDA workflow, interview guide and savings calculations are private delivery materials, not public lead forms. Set up Tally/Typeform separately after selecting the provider, privacy terms and access controls.
 - Sample reports, case studies, legal documents, newsletters, directories, sector landing pages, lead tests and other growth ideas need separate content or configuration; the pack describes them as future ideas rather than completed assets.
+
+## Cookie consent
+
+- Preferences are stored under `tag-cookie-consent-v1` in local storage for 180 days. Missing, invalid, expired or inaccessible storage defaults to no optional services. Necessary preference storage is not used for analytics.
+- Google Analytics and Chatbase load independently only for accepted categories. Google Analytics cookies are configured to expire after 180 days without automatic renewal.
+- Withdrawal reloads the page to unload accepted scripts and clears readable first-party storage matching the services' known prefixes, including GA cookies at accessible domain/path scopes. Other tabs reload when a previously active service is rejected. Data already sent, third-party storage and HttpOnly cookies cannot be deleted by this control.
+- With browser storage blocked, choices apply only to the current page, with an explicit message. Closing the panel or pressing Escape does not grant consent.
+- Bump the consent version/key and update disclosures before materially changing services or purposes. Review actual vendor storage, contractual terms and transfers before claiming full compliance.
+
+### Consent validation
+
+Chromium checks covered all 36 HTML pages with third-party requests intercepted: none were attempted before consent or after rejection. Vendor scripts were stubbed for deterministic tests; this validates gating rather than vendor internals. Tested separate Analytics/chat grants, accept all, persistence, withdrawal/reload, scoped cookie and storage cleanup, cross-tab withdrawal, invalid/expired/future records and blocked browser storage. Reviewed equal accept/reject actions, keyboard dismissal, translations and layouts at 1440, 768, 390 and 320 pixels.
+
+Manual check: in a fresh browser profile open any page, verify no requests to Google Analytics or Chatbase in the Network panel, then test each category separately. Reopen preferences using the fixed button, reject all and verify that neither service is loaded after the reload.
 
 ## Validation
 
