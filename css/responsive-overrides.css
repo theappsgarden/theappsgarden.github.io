@@ -5,6 +5,7 @@
 }
 @media (max-width: 640px) {
   .site .team-grid { grid-template-columns: 1fr; }
+  .site .team-card h3, .site .team-card .team-specialty { min-height: 0; }
 }
 .site .consulting-page section[id] { scroll-margin-top: 110px; }
 .site .consulting-page .service-price { font-weight: 700; color: var(--green); margin-top: 20px; }

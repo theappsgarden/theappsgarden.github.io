@@ -69,6 +69,9 @@ for page in pages.values():
             check('noopener' in attrs.get('rel', '').split(), page, 'external tab needs noopener')
         if tag == 'img':
             check('alt' in attrs, page, 'image needs alt')
+            if 'team-portrait' in attrs.get('class', '').split():
+                check(attrs.get('width') == '400' and attrs.get('height') == '500',
+                      page, 'team portraits must keep their full 4:5 framing')
 
     # Shared chrome is duplicated in HTML; ensure every depth has the same links.
     text = page.path.read_text()
