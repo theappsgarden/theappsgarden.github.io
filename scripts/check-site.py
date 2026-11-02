@@ -97,6 +97,15 @@ for page in pages.values():
             check(any(label.get('for') == attrs.get('id') for label in page.attrs('label')),
                   page, 'form field missing label')
     for form in page.attrs('form'):
+        disclosure = re.search(r'<details class="contact-privacy">(.*?)</details>', text, re.S)
+        check(bool(disclosure), page, 'privacy notice needs a collapsed native disclosure')
+        if disclosure:
+            check('<summary ' in disclosure.group(1) and 'id="contact-note"' in disclosure.group(1),
+                  page, 'privacy disclosure needs a labeled summary and full notice')
+            check('id="contact-data-note"' not in disclosure.group(1),
+                  page, 'sensitive-data warning must remain outside the disclosure')
+        check(form.get('aria-describedby') == 'contact-data-note',
+              page, 'form description should use the visible sensitive-data warning')
         check(form.get('action') == 'https://formspree.io/f/xyeebdyp' and
               form.get('method', '').lower() == 'post' and 'enctype' not in form,
               page, 'contact needs a native Formspree POST fallback')

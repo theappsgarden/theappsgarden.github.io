@@ -29,6 +29,9 @@
 .site .contact-field textarea { resize: vertical; }
 .site .meeting-request > p { margin: 20px 0; }
 .site .contact-field p { margin: 8px 0 0; font-size: .9rem; }
+.site .contact-privacy { margin: 8px 0 20px; font-size: .9rem; color: var(--muted); }
+.site .contact-privacy summary { width: fit-content; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.site .contact-privacy p { margin: 12px 0 0; }
 .site .meeting-request button:disabled { cursor: wait; opacity: .65; }
 .site .contact-status[data-state="error"], .site .contact-field [aria-invalid="true"] { color: #923525; }
 .site .contact-field [aria-invalid="true"] { border-color: #923525; }
