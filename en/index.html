@@ -52,7 +52,7 @@
     </div></div></section>
     <section class="section section--soft" id="contact"><div class="container">
       <h2>What is taking up too much of your team’s time?</h2><p class="lead">Tell us a little about it. We can arrange a free, no-obligation 30-minute call to see whether we can help.</p>
-      <form class="meeting-request" action="https://formspree.io/f/xyeebdyp" method="post" aria-describedby="contact-note">
+      <form class="meeting-request" action="https://formspree.io/f/xyeebdyp" method="post" aria-describedby="contact-data-note">
         <input type="hidden" name="subject" value="First conversation — The Apps Garden">
         <input type="hidden" name="language" value="en">
         <div class="contact-grid">
@@ -61,7 +61,7 @@
           <div class="contact-field"><label for="contact-company">Company (optional)</label><input id="contact-company" name="company" type="text" maxlength="150" autocomplete="organization"></div>
           <div class="contact-field"><label for="contact-goals">What would you like to improve?</label><textarea id="contact-goals" name="message" rows="4" maxlength="600" required aria-describedby="contact-data-note"></textarea><p id="contact-data-note">Please do not include confidential or sensitive information.</p></div>
         </div>
-        <p id="contact-note">Your details are sent through Formspree to The Apps Garden to respond to your enquiry. Formspree may process data outside the EU. See <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspree’s privacy policy</a>. For questions about your data, email team@theappsgarden.com.</p>
+        <details class="contact-privacy"><summary aria-label="Read more about privacy">Read more</summary><p id="contact-note">Your details are sent through Formspree to The Apps Garden to respond to your enquiry. Formspree may process data outside the EU. See <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspree’s privacy policy</a>. For questions about your data, email team@theappsgarden.com.</p></details>
         <button class="btn btn--default" type="submit">Send request</button>
         <p id="contact-status" class="contact-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
       </form>
