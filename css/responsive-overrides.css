@@ -17,6 +17,18 @@
 .site .consulting-page .section li { margin-bottom: 12px; }
 .site .consulting-page .section > .container > h3 { margin-top: 32px; margin-bottom: 12px; }
 .site .consulting-page .section > .container > p { max-width: 80ch; }
+.site .radar-plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 32px 0; }
+.site .radar-plan { display: flex; flex-direction: column; padding: 30px; border: 1px solid var(--line); border-radius: 20px; background: #f7faf7; }
+.site .radar-plan--featured { border: 2px solid var(--green); }
+.site .radar-plan h3 { margin: 0 0 12px; }
+.site .radar-plan > p:not(.radar-plan__price) { min-height: 3em; }
+.site .radar-plan .radar-plan__price { margin: 24px 0; font-size: 1.8rem; font-weight: 700; color: var(--green); }
+.site .radar-plan__price span { font-size: 1rem; font-weight: 400; }
+.site .radar-plan .btn { text-align: center; }
+.site .consulting-page .radar-plan ul { margin: 28px 0 0; padding: 24px 0 0; border-top: 1px solid var(--line); list-style: none; }
+.site .consulting-page .radar-plan li { position: relative; padding-left: 26px; }
+.site .radar-plan li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+@media (max-width: 900px) { .site .radar-plans { grid-template-columns: 1fr; } .site .radar-plan > p:not(.radar-plan__price) { min-height: 0; } }
 .site .pricing-table { width: 100%; max-width: 720px; border-collapse: collapse; margin: 32px 0; }
 .site .pricing-table caption { text-align: left; font-weight: 700; margin-bottom: 12px; }
 .site .pricing-table th, .site .pricing-table td { text-align: left; padding: 16px 12px; border-bottom: 1px solid var(--line); }
