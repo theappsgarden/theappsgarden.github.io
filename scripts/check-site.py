@@ -54,6 +54,10 @@ for page in pages.values():
     check(not [key for key, count in Counter(ids).items() if count > 1], page, 'duplicate IDs')
     check(len(page.attrs('h1')) == 1, page, 'expected one h1')
     check(bool(page.attrs('html')[0].get('lang')), page, 'missing language')
+    stylesheets = [local_target(page, attrs['href'])[0] for attrs in page.attrs('link')
+                   if attrs.get('rel') == 'stylesheet']
+    check(stylesheets == [ROOT / 'css/production.css', ROOT / 'css/responsive-overrides.css'],
+          page, 'shared stylesheets must load in the same order on every page')
     for tag, attrs in page.elements:
         for attr in ('href', 'src'):
             if attr not in attrs:
@@ -134,6 +138,26 @@ for folder in ('es', 'en', 'cat'):
         check(not page.attrs('form'), page, 'use the shared landing contact flow')
         check(not any('steps' in a.get('class', '').split() for a in page.attrs('ol')),
               page, 'do not repeat the landing method')
+
+# Services share one structural layout; translations may change copy, not formatting.
+service_structure = None
+for folder in ('es', 'en', 'cat'):
+    page = pages[ROOT / folder / 'services.html']
+    main_text = page.path.read_text().split('<main', 1)[1].split('</main>', 1)[0]
+    main = Page(page.path, '<main' + main_text + '</main>')
+    check('services-page' in main.attrs('main')[0].get('class', '').split(),
+          page, 'services need their scoped layout')
+    structure = [(tag, attrs.get('class', ''), attrs.get('id', ''))
+                 for tag, attrs in main.elements]
+    if service_structure is None:
+        service_structure = structure
+    check(structure == service_structure, page, 'localized Services layout drift')
+    check(sum('radar-plan' in a.get('class', '').split() for a in main.attrs('article')) == 3,
+          page, 'services need three comparable Radar plans')
+    check(sum('feature-card' in a.get('class', '').split() for a in main.attrs('article')) == 4,
+          page, 'services need four training workshops')
+    check(any(a.get('id') == 'process' and 'service-method-link' in a.get('class', '').split()
+              for a in main.attrs('p')), page, 'method link needs its shared section layout')
 
 # Root and Spanish landing content must stay in sync, allowing relative-path depth.
 root_text = (ROOT / 'index.html').read_text().split('<main', 1)[1].split('</main>')[0]
