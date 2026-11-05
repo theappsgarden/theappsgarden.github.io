@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-05T10:00:44Z",
+  "generatedAt": "2026-11-05T16:24:20Z",
   "title": "Design System: The Apps Garden",
   "extensions": {
     "colorMeta": {
@@ -25,7 +25,7 @@
       "title":{"displayName":"Card Title","purpose":"Shared third-level headings."},
       "body":{"displayName":"Body","purpose":"Default shared text."},
       "label":{"displayName":"Eyebrow","purpose":"Uppercase section labels."},
-      "introduction":{"displayName":"Introduction","purpose":"Homepage supporting copy."},
+      "introduction":{"displayName":"Introduction","purpose":"Homepage supporting copy; secondary-page introductions use their own size."},
       "reading":{"displayName":"Reading","purpose":"Article text and mobile introductions."},
       "utility":{"displayName":"Utility","purpose":"Footer cookie preferences."},
       "index":{"displayName":"Index","purpose":"Ordered process step numbers."}
@@ -65,7 +65,7 @@
     {
       "name":"Feature Card","kind":"card","refersTo":"feature-card","description":"Flat bordered information card.",
       "html":"<article class=\"ds-card\"><h3>Your needs come first</h3><p>We recommend tools that fit your team.</p></article>",
-      "css":".ds-card{padding:28px;border:1px solid var(--line,#d7e2dc);border-radius:18px;background:#fff;color:var(--ink,#172a25);font:16px/1.55 Inter,'Helvetica Neue',Arial,sans-serif}.ds-card h3{margin:45px 0 14px;font-size:clamp(1.2rem,2vw,1.6rem);font-weight:650;letter-spacing:-.035em;line-height:1.1}.ds-card p{color:var(--muted,#51645d);margin:0}"
+      "css":".ds-card{padding:28px;border:1px solid var(--line,#d7e2dc);border-radius:18px;background:#fff;color:var(--ink,#172a25);font:16px/1.55 Inter,'Helvetica Neue',Arial,sans-serif}.ds-card h3{margin:0 0 16px;font-size:clamp(1.2rem,2vw,1.6rem);font-weight:650;letter-spacing:-.035em;line-height:1.1}.ds-card p{color:var(--muted,#51645d);margin:0}"
     },
     {
       "name":"Contact Field","kind":"input","refersTo":"field","description":"Labeled contact input with keyboard-focus and invalid states.",

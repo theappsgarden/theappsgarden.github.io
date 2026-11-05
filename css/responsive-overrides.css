@@ -1,3 +1,40 @@
+/* Use-case library */
+.site .cases-page .page-hero { padding-block: 72px 36px; background: #fff; border: 0; }
+.site .cases-page .page-hero h1 { font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 16px; }
+.site .cases-page .case-notice { max-width: 75ch; color: var(--muted); font-size: .9rem; margin-top: 16px; }
+.site .case-library { padding: 16px 0 80px; }
+.site .case-library > .container { max-width: 1080px; }
+.site .case-library h2 { font-size: clamp(1.6rem, 2.5vw, 2rem); margin-bottom: 24px; }
+.site .case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.site .case-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; color: var(--ink); text-decoration: none; background: #fff; transition: border-color .18s ease, transform .18s ease; }
+.site .case-card:hover { border-color: var(--green); transform: translateY(-3px); }
+.site .case-card:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+.site .case-card__visual { display: block; width: 100%; height: auto; background: var(--dark); }
+.site .case-card__body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; gap: 12px; padding: 24px; }
+.site .case-card__body h3 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.25; }
+.site .case-card__body p { margin: 0; color: var(--muted); font-size: .9rem; }
+.site .case-card__link { margin-top: auto; color: var(--green-deep); font-weight: 600; }
+/* Keep case prose and both list types on the same reading column. */
+.site .cases-page .case-detail > .container,
+.site .cases-page .case-detail + .section > .container { max-width: 72ch; }
+.site .cases-page .case-detail h1 { max-width: 24ch; margin: 12px 0 20px; font-size: clamp(2.25rem, 4vw, 3.5rem); line-height: 1.12; }
+.site .cases-page .section.case-detail > .container > h2 { margin: 40px 0 12px; font-size: clamp(1.2rem, 2vw, 1.6rem); line-height: 1.25; }
+.site .cases-page .case-detail { padding-bottom: 32px; }
+.site .cases-page .case-detail + .section { padding-top: 32px; }
+.site .cases-page .case-detail + .section > .container > h2 { margin: 0 0 12px; font-size: clamp(1.2rem, 2vw, 1.6rem); line-height: 1.25; }
+.site .cases-page .case-detail > .container > :is(ul, ol) { max-width: 100%; margin: 0 0 20px; padding-inline-start: 26px; list-style-position: outside; }
+.site .cases-page .case-detail > .container > p + :is(ul, ol) { margin-top: 12px; }
+.site .cases-page .case-detail > .container li { margin: 0; padding-inline-start: 4px; line-height: 1.7; }
+.site .cases-page .case-detail > .container li + li { margin-top: 12px; }
+.site .cases-page .case-detail li::marker { color: var(--green-deep); font-weight: 600; }
+.site .cases-page .case-detail .case-back { display: inline-flex; align-items: center; min-height: 44px; margin-top: 24px; font-weight: 600; }
+@media (max-width: 640px) {
+  .site .cases-page .page-hero { padding-block: 48px 28px; }
+  .site .case-library { padding-bottom: 52px; }
+  .site .case-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .site .case-card { transition: none; } .site .case-card:hover { transform: none; } }
+
 /* Layout changes for the shared static site; no JavaScript required for navigation. */
 /* Shared refinement layer: isolate the modern site from legacy rem sizing. */
 html:has(body.site) { font-size: 16px; scroll-padding-top: 28px; }
