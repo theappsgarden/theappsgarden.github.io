@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T10:00:44Z",
+  "title": "Design System: The Apps Garden",
+  "extensions": {
+    "colorMeta": {
+      "green": {"role":"primary","displayName":"Garden Green","tonalRamp":["oklch(15% .02 173)","oklch(27% .04 173)","oklch(39% .07 173)","oklch(51% .09 173)","oklch(63% .10 173)","oklch(75% .08 173)","oklch(87% .04 173)","oklch(95% .015 173)"]},
+      "green-deep": {"role":"primary","displayName":"Deep Evergreen","tonalRamp":["oklch(15% .02 174)","oklch(27% .04 174)","oklch(39% .06 174)","oklch(51% .08 174)","oklch(63% .09 174)","oklch(75% .07 174)","oklch(87% .035 174)","oklch(95% .01 174)"]},
+      "green-hover": {"role":"primary","displayName":"Evergreen Hover","tonalRamp":["oklch(15% .02 173)","oklch(27% .035 173)","oklch(39% .05 173)","oklch(51% .065 173)","oklch(63% .07 173)","oklch(75% .05 173)","oklch(87% .03 173)","oklch(95% .01 173)"]},
+      "ink": {"role":"neutral","displayName":"Green Ink","tonalRamp":["oklch(15% .01 168)","oklch(27% .02 168)","oklch(39% .025 168)","oklch(51% .03 168)","oklch(63% .03 168)","oklch(75% .02 168)","oklch(87% .01 168)","oklch(95% .005 168)"]},
+      "muted": {"role":"neutral","displayName":"Muted Green","tonalRamp":["oklch(15% .01 164)","oklch(27% .02 164)","oklch(39% .025 164)","oklch(51% .03 164)","oklch(63% .03 164)","oklch(75% .02 164)","oklch(87% .01 164)","oklch(95% .005 164)"]},
+      "line": {"role":"neutral","displayName":"Soft Green Border","tonalRamp":["oklch(15% .005 158)","oklch(27% .01 158)","oklch(39% .015 158)","oklch(51% .02 158)","oklch(63% .02 158)","oklch(75% .015 158)","oklch(87% .01 158)","oklch(95% .005 158)"]},
+      "surface": {"role":"neutral","displayName":"Soft Section","tonalRamp":["oklch(15% .003 158)","oklch(27% .005 158)","oklch(39% .007 158)","oklch(51% .01 158)","oklch(63% .01 158)","oklch(75% .007 158)","oklch(87% .005 158)","oklch(95% .003 158)"]},
+      "white": {"role":"neutral","displayName":"White Canvas","tonalRamp":["oklch(15% 0 0)","oklch(27% 0 0)","oklch(39% 0 0)","oklch(51% 0 0)","oklch(63% 0 0)","oklch(75% 0 0)","oklch(87% 0 0)","oklch(95% 0 0)"]},
+      "dark": {"role":"neutral","displayName":"Deep Green Surface","tonalRamp":["oklch(15% .015 171)","oklch(27% .03 171)","oklch(39% .04 171)","oklch(51% .05 171)","oklch(63% .05 171)","oklch(75% .035 171)","oklch(87% .02 171)","oklch(95% .005 171)"]},
+      "sage": {"role":"neutral","displayName":"Soft Sage","tonalRamp":["oklch(15% .005 154)","oklch(27% .01 154)","oklch(39% .02 154)","oklch(51% .03 154)","oklch(63% .03 154)","oklch(75% .025 154)","oklch(87% .02 154)","oklch(95% .01 154)"]},
+      "light-button": {"role":"neutral","displayName":"Light Mint Action","tonalRamp":["oklch(15% .01 163)","oklch(27% .02 163)","oklch(39% .03 163)","oklch(51% .04 163)","oklch(63% .04 163)","oklch(75% .035 163)","oklch(87% .025 163)","oklch(95% .01 163)"]},
+      "outline": {"role":"neutral","displayName":"Outline Green","tonalRamp":["oklch(15% .005 157)","oklch(27% .01 157)","oklch(39% .02 157)","oklch(51% .025 157)","oklch(63% .025 157)","oklch(75% .02 157)","oklch(87% .015 157)","oklch(95% .005 157)"]},
+      "error": {"role":"error","displayName":"Form Error","tonalRamp":["oklch(15% .025 33)","oklch(27% .06 33)","oklch(39% .10 33)","oklch(51% .13 33)","oklch(63% .13 33)","oklch(75% .09 33)","oklch(87% .04 33)","oklch(95% .015 33)"]}
+    },
+    "typographyMeta": {
+      "display":{"displayName":"Homepage Display","purpose":"Current homepage hero; other page title sizes are documented in DESIGN.md."},
+      "page-title":{"displayName":"Page Title","purpose":"Shared secondary-page titles; homepage display remains distinct."},
+      "headline":{"displayName":"Section Heading","purpose":"Shared section headings, consistently scaled across Services and other marketing pages."},
+      "title":{"displayName":"Card Title","purpose":"Shared third-level headings."},
+      "body":{"displayName":"Body","purpose":"Default shared text."},
+      "label":{"displayName":"Eyebrow","purpose":"Uppercase section labels."},
+      "introduction":{"displayName":"Introduction","purpose":"Homepage supporting copy."},
+      "reading":{"displayName":"Reading","purpose":"Article text and mobile introductions."},
+      "utility":{"displayName":"Utility","purpose":"Footer cookie preferences."},
+      "index":{"displayName":"Index","purpose":"Ordered process step numbers."}
+    },
+    "shadows": [
+      {"name":"hero","value":"0 24px 70px rgba(16,43,37,.14)","purpose":"Prominent hero visuals."},
+      {"name":"mobile-menu","value":"0 18px 40px rgba(16,43,37,.12)","purpose":"Floating mobile navigation."}
+    ],
+    "motion": [
+      {"name":"button-color","value":"background .18s ease, border-color .18s ease, color .18s ease","purpose":"Button state changes."},
+      {"name":"media-icon","value":"transform .35s ease","purpose":"Icon hover movement."},
+      {"name":"media-image","value":"transform .6s ease","purpose":"Image hover scaling."},
+      {"name":"reduced-motion","value":".01ms","purpose":"Reduced transition and animation durations; workflow outcomes are static."}
+    ],
+    "breakpoints": [
+      {"name":"team-tablet","value":"1000px"},
+      {"name":"tablet","value":"900px"},
+      {"name":"mobile","value":"640px"}
+    ]
+  },
+  "components": [
+    {
+      "name":"Primary Button","kind":"button","refersTo":"button-primary","description":"Main action on light surfaces.",
+      "html":"<button class=\"ds-primary\">Tell us what you need</button>",
+      "css":".ds-primary{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.65rem 1.45rem;font:600 .9rem/1.3 Inter,'Helvetica Neue',Arial,sans-serif;border:1px solid var(--green-deep,#006b59);border-radius:999px;background:var(--green-deep,#006b59);color:#fff;cursor:pointer;transition:background .18s ease,border-color .18s ease,color .18s ease}.ds-primary:hover{background:#005344;border-color:#005344}.ds-primary:focus-visible{outline:3px solid var(--green,#007e68);outline-offset:4px}"
+    },
+    {
+      "name":"Outline Button","kind":"button","refersTo":"button-outline","description":"Secondary action on light surfaces.",
+      "html":"<a class=\"ds-outline\" href=\"#process\">See how we work</a>",
+      "css":".ds-outline{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.65rem 1.45rem;font:600 .9rem/1.3 Inter,'Helvetica Neue',Arial,sans-serif;border:1px solid #b8cac0;border-radius:999px;background:#fff;color:var(--ink,#172a25);text-decoration:none;transition:background .18s ease,border-color .18s ease,color .18s ease}.ds-outline:hover{background:#eaf4ee;border-color:var(--green,#007e68);color:var(--green-deep,#006b59)}.ds-outline:focus-visible{outline:3px solid var(--green,#007e68);outline-offset:4px}"
+    },
+    {
+      "name":"Light Button","kind":"button","refersTo":"button-light","description":"Action on a dark section; preview includes its backdrop.",
+      "html":"<div class=\"ds-backdrop\"><a class=\"ds-light\" href=\"#contact\">Let’s talk</a></div>",
+      "css":".ds-backdrop{padding:24px;background:var(--dark,#102b25)}.ds-light{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.65rem 1.45rem;font:600 .9rem/1.3 Inter,'Helvetica Neue',Arial,sans-serif;border:1px solid #dcf3e9;border-radius:999px;background:#dcf3e9;color:var(--ink,#172a25);text-decoration:none;transition:background .18s ease,border-color .18s ease,color .18s ease}.ds-light:hover{background:#fff;border-color:#fff}.ds-light:focus-visible{outline:3px solid var(--green,#007e68);outline-offset:4px}"
+    },
+    {
+      "name":"Feature Card","kind":"card","refersTo":"feature-card","description":"Flat bordered information card.",
+      "html":"<article class=\"ds-card\"><h3>Your needs come first</h3><p>We recommend tools that fit your team.</p></article>",
+      "css":".ds-card{padding:28px;border:1px solid var(--line,#d7e2dc);border-radius:18px;background:#fff;color:var(--ink,#172a25);font:16px/1.55 Inter,'Helvetica Neue',Arial,sans-serif}.ds-card h3{margin:45px 0 14px;font-size:clamp(1.2rem,2vw,1.6rem);font-weight:650;letter-spacing:-.035em;line-height:1.1}.ds-card p{color:var(--muted,#51645d);margin:0}"
+    },
+    {
+      "name":"Contact Field","kind":"input","refersTo":"field","description":"Labeled contact input with keyboard-focus and invalid states.",
+      "html":"<div class=\"ds-field\"><label for=\"ds-company\">Company</label><input id=\"ds-company\" name=\"company\" autocomplete=\"organization\"></div>",
+      "css":".ds-field{font:16px/1.55 Inter,'Helvetica Neue',Arial,sans-serif;color:var(--ink,#172a25)}.ds-field label{display:block;font-weight:600;margin-bottom:8px}.ds-field input{box-sizing:border-box;width:100%;min-height:48px;padding:12px;border:1px solid var(--line,#d7e2dc);border-radius:8px;background:#fff;color:#173e33;font:inherit}.ds-field input:focus-visible{outline:3px solid var(--green,#007e68);outline-offset:3px}.ds-field input[aria-invalid=true]{color:#923525;border-color:#923525}"
+    },
+    {
+      "name":"Desktop Navigation","kind":"nav","description":"Simple semibold links with green current and hover states.",
+      "html":"<nav class=\"ds-nav\" aria-label=\"Example navigation\"><a href=\"#home\" aria-current=\"page\">Home</a><a href=\"#services\">Services</a><a href=\"#products\">Products</a></nav>",
+      "css":".ds-nav{display:flex;align-items:center;flex-wrap:wrap;gap:22px;font-family:Inter,'Helvetica Neue',Arial,sans-serif}.ds-nav a{font-size:.91rem;font-weight:600;color:var(--ink,#172a25);text-decoration:none}.ds-nav a:hover,.ds-nav a[aria-current=page]{color:var(--green,#007e68)}.ds-nav a:focus-visible{outline:3px solid var(--green,#007e68);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar":"The Apps Garden",
+    "overview":"Clear, calm, approachable, and professional. Generous space, green accents, and readable typography give practical information room to breathe. Components are approachable and restrained: pill buttons, softly rounded cards, and clear outlined fields.\n\nThis records the incumbent implementation, not a redesign. Sources are the shared visual-system layer in `css/production.css` and the later overrides in `css/responsive-overrides.css`. Legacy article utilities are not a second design direction. The site-wide refinement was browser-checked at mobile, intermediate, and desktop widths, including localized interactions and reduced motion.",
+    "keyCharacteristics":["Green accents on white and pale-green surfaces.","Spacious layouts with strong typographic hierarchy.","Mostly flat surfaces, with selective visual and navigation shadows."],
+    "rules":[],
+    "dos":["**Do** reuse the shared green roles, typography, and responsive spacing.","**Do** retain visible keyboard focus and reduced-motion behavior.","**Do** preserve rounded image clipping and the logo/wordmark relationship."],
+    "donts":["**Don't** turn illustration-specific colors, gradients, or shadows into default component styling.","**Don't** override the responsive layer with desktop-only assumptions.","**Don't** treat legacy utility styles as a new visual direction."]
+  }
+}

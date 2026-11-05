@@ -1,3 +1,63 @@
+// Progressive enhancements: navigation and content remain usable without JavaScript.
+(function () {
+  'use strict';
+
+  const menu = document.querySelector('.mobile-menu');
+  if (menu) {
+    const summary = menu.querySelector('summary');
+    const closeMenu = (restoreFocus) => {
+      if (!menu.open) return;
+      menu.open = false;
+      if (restoreFocus) summary.focus({ preventScroll: true });
+    };
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.open) {
+        event.preventDefault();
+        closeMenu(true);
+      }
+    });
+    document.addEventListener('click', event => {
+      if (!menu.contains(event.target)) closeMenu(false);
+    });
+    menu.addEventListener('click', event => {
+      if (event.target.closest('a')) closeMenu(false);
+    });
+    document.addEventListener('focusin', event => {
+      if (!menu.contains(event.target)) closeMenu(false);
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) closeMenu(false);
+    });
+  }
+
+  const language = document.documentElement.lang.split('-')[0];
+  document.querySelectorAll('.mobile-languages a').forEach(link => {
+    if (link.lang === language) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+
+  const workflow = document.querySelector('.hero-visual--workflow');
+  const labels = {
+    en: ['Pause animation', 'Resume animation'],
+    es: ['Pausar animación', 'Reanudar animación'],
+    ca: ['Pausar animació', 'Reprendre animació']
+  }[language];
+  if (workflow && labels) {
+    // A figure with an interactive control must not hide its children as role=img.
+    workflow.removeAttribute('role');
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'workflow-toggle';
+    toggle.textContent = labels[0];
+    toggle.addEventListener('click', () => {
+      const paused = workflow.dataset.paused !== 'true';
+      workflow.dataset.paused = String(paused);
+      toggle.textContent = labels[paused ? 1 : 0];
+    });
+    workflow.appendChild(toggle);
+  }
+})();
+
 (function () {
   'use strict';
 
@@ -159,7 +219,7 @@
     return node;
   }
 
-  const opener = button(copy.settings, document.body, () => openPreferences(true));
+  const opener = button(copy.settings, document.querySelector('.footer-bottom') || document.body, () => openPreferences(true));
   opener.className = 'cookie-preferences';
   opener.setAttribute('aria-haspopup', 'dialog');
   const dialog = element('dialog', '', document.body);
@@ -213,14 +273,20 @@
   const status = element('p', '', dialog);
   status.setAttribute('role', 'status');
   button(copy.close, dialog, () => dialog.close());
-  dialog.addEventListener('close', () => opener.focus());
+  let returnFocus = null;
+  dialog.addEventListener('close', () => {
+    if (returnFocus && returnFocus.isConnected) returnFocus.focus({ preventScroll: true });
+  });
 
   function openPreferences(expanded) {
     analytics.checked = !!(consent && consent.analytics);
     chat.checked = !!(consent && consent.chat);
     options.hidden = !expanded;
     configure.setAttribute('aria-expanded', String(expanded));
-    if (!dialog.open) dialog.showModal();
+    if (!dialog.open) {
+      returnFocus = document.activeElement;
+      dialog.showModal();
+    }
   }
 
   function saveConsent(allowAnalytics, allowChat) {
