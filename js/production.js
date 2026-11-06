@@ -58,6 +58,108 @@
   }
 })();
 
+// Homepage storytelling is scroll-led, never scroll-jacked; all content works without it.
+(function () {
+  'use strict';
+  const home = document.querySelector('.garden-home');
+  if (!home) return;
+
+  const body = document.body;
+  const method = home.querySelector('.home-method');
+  const steps = Array.from(home.querySelectorAll('.method-step'));
+  const sections = Array.from(home.children).filter(element => element.tagName === 'SECTION');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const pinned = window.matchMedia('(min-width: 901px) and (min-height: 681px)');
+  const statement = home.querySelector('.home-statement');
+  let manualStep = false;
+  let currentStep = -1;
+  let scheduled = false;
+
+  function openStep(index) {
+    if (currentStep === index) return;
+    currentStep = index;
+    steps.forEach((step, i) => { step.open = i === index; });
+    method.style.setProperty('--growth', String([.02, .43, .69, 1][index]));
+  }
+
+  function update() {
+    scheduled = false;
+    const headerHeight = window.innerWidth > 900 ? 84 : 72;
+    const active = sections.find(section => {
+      const rect = section.getBoundingClientRect();
+      return rect.top <= headerHeight && rect.bottom > headerHeight;
+    });
+    body.classList.toggle('header-on-light', !!active && active.dataset.headerTone !== 'dark');
+    body.classList.toggle('header-scrolled', window.scrollY > 24);
+
+    if (pinned.matches && !reduced.matches) {
+      const rect = method.getBoundingClientRect();
+      const distance = Math.max(1, rect.height - window.innerHeight + headerHeight);
+      const progress = Math.max(0, Math.min(1, (headerHeight - rect.top) / distance));
+      if (rect.bottom < headerHeight || rect.top > window.innerHeight) manualStep = false;
+      if (!manualStep) openStep(Math.min(steps.length - 1, Math.floor(progress * steps.length)));
+    }
+  }
+
+  function scheduleUpdate() {
+    if (scheduled) return;
+    scheduled = true;
+    window.requestAnimationFrame(update);
+  }
+
+  function configureMotion() {
+    body.classList.toggle('home-motion', !reduced.matches);
+    currentStep = -1;
+    manualStep = false;
+    if (reduced.matches || !pinned.matches) {
+      steps.forEach(step => { step.open = true; });
+      method.style.setProperty('--growth', '1');
+    } else openStep(0);
+    scheduleUpdate();
+    // Share one preference transition with the richer homepage motion controller.
+    if (typeof document.dispatchEvent === 'function' && typeof CustomEvent === 'function') {
+      document.dispatchEvent(new CustomEvent('home:motion-preference', { detail: { reduced: reduced.matches } }));
+    }
+  }
+
+  steps.forEach((step, index) => {
+    step.querySelector('summary').addEventListener('click', () => {
+      if (!pinned.matches || reduced.matches) return;
+      manualStep = true;
+      // Let the native disclosure activation finish before syncing its siblings.
+      window.requestAnimationFrame(() => { currentStep = -1; openStep(index); });
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-resolved');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: .5, rootMargin: '0px 0px -8% 0px' });
+    home.querySelectorAll('.task-row').forEach(row => observer.observe(row));
+    // A single readable text reveal, rather than identical entrances on every section.
+    if (statement && !reduced.matches) {
+      const reveal = new IntersectionObserver(entries => {
+        if (!entries.some(entry => entry.isIntersecting)) return;
+        statement.classList.add('is-read');
+        reveal.disconnect();
+      }, { threshold: .5 });
+      reveal.observe(statement);
+    }
+  }
+
+  body.classList.add('home-enhanced');
+  configureMotion();
+  window.addEventListener('scroll', scheduleUpdate, { passive: true });
+  window.addEventListener('resize', scheduleUpdate, { passive: true });
+  reduced.addEventListener('change', configureMotion);
+  pinned.addEventListener('change', configureMotion);
+  window.addEventListener('pageshow', scheduleUpdate);
+})();
+
 (function () {
   'use strict';
 

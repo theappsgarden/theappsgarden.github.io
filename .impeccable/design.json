@@ -1,9 +1,12 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-05T16:24:20Z",
+  "generatedAt": "2026-11-06T21:00:00Z",
   "title": "Design System: The Apps Garden",
   "extensions": {
     "colorMeta": {
+      "home-forest":{"role":"primary","displayName":"Homepage Forest","tonalRamp":["oklch(15% .02 162)","oklch(27% .035 162)","oklch(39% .05 162)","oklch(51% .07 162)","oklch(63% .07 162)","oklch(75% .05 162)","oklch(87% .025 162)","oklch(95% .01 162)"]},
+      "home-cream":{"role":"neutral","displayName":"Team Cream","tonalRamp":["oklch(15% .01 90)","oklch(27% .02 90)","oklch(39% .025 90)","oklch(51% .03 90)","oklch(63% .035 90)","oklch(75% .03 90)","oklch(87% .025 90)","oklch(95% .015 90)"]},
+      "task-sage":{"role":"neutral","displayName":"Reviewed Outcome","tonalRamp":["oklch(15% .01 150)","oklch(27% .02 150)","oklch(39% .03 150)","oklch(51% .04 150)","oklch(63% .04 150)","oklch(75% .035 150)","oklch(87% .025 150)","oklch(95% .01 150)"]},
       "green": {"role":"primary","displayName":"Garden Green","tonalRamp":["oklch(15% .02 173)","oklch(27% .04 173)","oklch(39% .07 173)","oklch(51% .09 173)","oklch(63% .10 173)","oklch(75% .08 173)","oklch(87% .04 173)","oklch(95% .015 173)"]},
       "green-deep": {"role":"primary","displayName":"Deep Evergreen","tonalRamp":["oklch(15% .02 174)","oklch(27% .04 174)","oklch(39% .06 174)","oklch(51% .08 174)","oklch(63% .09 174)","oklch(75% .07 174)","oklch(87% .035 174)","oklch(95% .01 174)"]},
       "green-hover": {"role":"primary","displayName":"Evergreen Hover","tonalRamp":["oklch(15% .02 173)","oklch(27% .035 173)","oklch(39% .05 173)","oklch(51% .065 173)","oklch(63% .07 173)","oklch(75% .05 173)","oklch(87% .03 173)","oklch(95% .01 173)"]},
@@ -19,34 +22,69 @@
       "error": {"role":"error","displayName":"Form Error","tonalRamp":["oklch(15% .025 33)","oklch(27% .06 33)","oklch(39% .10 33)","oklch(51% .13 33)","oklch(63% .13 33)","oklch(75% .09 33)","oklch(87% .04 33)","oklch(95% .015 33)"]}
     },
     "typographyMeta": {
-      "display":{"displayName":"Homepage Display","purpose":"Current homepage hero; other page title sizes are documented in DESIGN.md."},
+      "display":{"displayName":"Homepage Display","purpose":"Self-hosted Hanken Grotesk, 400 weight; full-width botanical hero only."},
+      "home-headline":{"displayName":"Homepage Heading","purpose":"Light, open section headings on the redesigned landing pages."},
+      "home-body":{"displayName":"Homepage Body","purpose":"Hanken Grotesk supporting text; secondary pages keep Inter."},
+      "home-title":{"displayName":"Homepage Title","purpose":"Medium-weight product and service titles."},
       "page-title":{"displayName":"Page Title","purpose":"Shared secondary-page titles; homepage display remains distinct."},
       "headline":{"displayName":"Section Heading","purpose":"Shared section headings, consistently scaled across Services and other marketing pages."},
       "title":{"displayName":"Card Title","purpose":"Shared third-level headings."},
       "body":{"displayName":"Body","purpose":"Default shared text."},
       "label":{"displayName":"Eyebrow","purpose":"Uppercase section labels."},
-      "introduction":{"displayName":"Introduction","purpose":"Homepage supporting copy; secondary-page introductions use their own size."},
+      "introduction":{"displayName":"Legacy Introduction","purpose":"Retained legacy layout role; redesigned homepage hero copy uses its own 1rem size."},
       "reading":{"displayName":"Reading","purpose":"Article text and mobile introductions."},
       "utility":{"displayName":"Utility","purpose":"Footer cookie preferences."},
       "index":{"displayName":"Index","purpose":"Ordered process step numbers."}
     },
     "shadows": [
+      {"name":"home-case-hover","value":"0 10px 28px #102e250d","purpose":"Subtle hover lift on illustrative use cases."},
       {"name":"hero","value":"0 24px 70px rgba(16,43,37,.14)","purpose":"Prominent hero visuals."},
       {"name":"mobile-menu","value":"0 18px 40px rgba(16,43,37,.12)","purpose":"Floating mobile navigation."}
     ],
     "motion": [
+      {"name":"home-ease","value":"cubic-bezier(.16,1,.3,1)","purpose":"Coordinated homepage intro, plant reveal and media movement."},
+      {"name":"home-plant","value":"scroll-linked SVG strokeDashoffset and leaf transforms","purpose":"The logo's two chevrons drop into the pot before continuous stem drawing and leaf growth; vertically centered on desktop, static full plant on mobile, short windows and reduced motion."},
+      {"name":"home-typewriter","value":"32ms per character, capped at 1450ms","purpose":"Headings type once with one moving DOM caret synchronized to the CSS character clock. Remove it on completion, cancellation, reduced motion or a hidden tab. Whole words and the accessible name remain stable; never create a cursor per character."},
+      {"name":"home-counter","value":"1500ms, quartic ease-out","purpose":"Localized visual figures count to their original values, without moving their units or announcing intermediate digits."},
+      {"name":"home-image-arrival","value":"950ms cubic-bezier(.16,1,.3,1), 75ms sibling stagger","purpose":"A bounded downward, soft-focus arrival for editorial imagery."},
+      {"name":"home-case-expansion","value":"grid-template-columns .7s cubic-bezier(.16,1,.3,1)","purpose":"2.4fr selected case alongside 1fr closed cases above 1100px; native expansion controls remain distinct from navigation."},
+      {"name":"home-current","value":"30fps maximum, one shared WebGL context, 640x480 maximum surface","purpose":"Original flowing forest material; only visible surfaces render. No on-page background controls. Stopped in hidden tabs, absent with reduced motion or unavailable WebGL."},
+      {"name":"home-header","value":"backdrop-filter:blur(14px)","purpose":"Maintain navigation contrast as it crosses light and dark sections."},
       {"name":"button-color","value":"background .18s ease, border-color .18s ease, color .18s ease","purpose":"Button state changes."},
       {"name":"media-icon","value":"transform .35s ease","purpose":"Icon hover movement."},
       {"name":"media-image","value":"transform .6s ease","purpose":"Image hover scaling."},
       {"name":"reduced-motion","value":".01ms","purpose":"Reduced transition and animation durations; workflow outcomes are static."}
     ],
     "breakpoints": [
+      {"name":"home-team-stack","value":"1200px"},
+      {"name":"home-short-window","value":"680px height"},
+      {"name":"home-expanding-cases","value":"1100px"},
       {"name":"team-tablet","value":"1000px"},
       {"name":"tablet","value":"900px"},
       {"name":"mobile","value":"640px"}
     ]
   },
   "components": [
+    {
+      "name":"Homepage White Action","kind":"button","refersTo":"home-button","description":"Primary action on the homepage's forest fields.",
+      "html":"<div class=\"ds-home-ground\"><button class=\"ds-home-action\">Let’s talk about your business</button></div>",
+      "css":".ds-home-ground{padding:24px;background:#102e25}.ds-home-action{display:inline-flex;align-items:center;min-height:48px;padding:13px 23px;border:1px solid #fff;border-radius:999px;background:#fff;color:#102e25;font:500 .875rem/1.3 'Hanken Grotesk','Helvetica Neue',sans-serif;cursor:pointer;transition:background .18s ease}.ds-home-action:hover{background:#dceee0;border-color:#dceee0}.ds-home-action:focus-visible{outline:3px solid #a9e3bc;outline-offset:4px}"
+    },
+    {
+      "name":"Homepage Dark Field","kind":"input","refersTo":"home-field","description":"Readable contact field on forest, with a visible boundary and mint focus.",
+      "html":"<div class=\"ds-home-field\"><label for=\"ds-home-email\">Email</label><input id=\"ds-home-email\" type=\"email\" autocomplete=\"email\"></div>",
+      "css":".ds-home-field{padding:24px;background:#102e25;color:#e0ece3;font:400 16px/1.55 'Hanken Grotesk',sans-serif}.ds-home-field label{display:block;font-size:.875rem;margin-bottom:8px}.ds-home-field input{box-sizing:border-box;width:100%;min-height:48px;padding:12px;background:#ffffff08;border:1px solid #6f8d7e;border-radius:3px;color:#fff;font:inherit;caret-color:#b3dfbf}.ds-home-field input:hover{border-color:#c8e1d0}.ds-home-field input:focus-visible{outline:3px solid #a9e3bc;outline-offset:3px}.ds-home-field input[aria-invalid=true]{border-color:#ffd0ba;color:#ffd0ba}"
+    },
+    {
+      "name":"Task Transformation","kind":"custom","refersTo":"task-output","description":"Always-readable input and reviewed-output pair.",
+      "html":"<div class=\"ds-task\"><span class=\"ds-task-input\">Scattered notes</span><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-5-5 5 5-5 5\" stroke=\"#007e68\" stroke-width=\"1.5\"/></svg><span class=\"ds-task-output\">Summary and actions</span></div>",
+      "css":".ds-task{display:grid;grid-template-columns:1fr 24px 1.1fr;gap:10px;align-items:center;font:400 .8125rem/1.4 'Hanken Grotesk',sans-serif}.ds-task-input,.ds-task-output{padding:16px 18px;min-height:32px;border-radius:10px}.ds-task-input{background:#f7f3e7;color:#596050}.ds-task-output{background:#d8ebde;color:#173f2c;font-weight:500}"
+    },
+    {
+      "name":"Homepage Method Disclosure","kind":"custom","description":"Native method disclosure; keyboard operation stays native.",
+      "html":"<div class=\"ds-method-ground\"><details class=\"ds-method\" open><summary><span>01</span>We listen</summary><p>We talk to your team to understand where time goes, what gets repeated and what is getting in the way.</p></details></div>",
+      "css":".ds-method-ground{padding:24px;background:#102e25;font-family:'Hanken Grotesk',sans-serif}.ds-method{border-top:1px solid #b9d6c040;padding:19px 0;color:#ccdfd1}.ds-method summary{display:flex;gap:24px;align-items:center;min-height:44px;list-style:none;cursor:pointer;font-size:1.25rem}.ds-method summary span{font-size:.75rem;color:#a3c4b0}.ds-method summary:hover{color:#fff}.ds-method summary:focus-visible{outline:3px solid #a9e3bc;outline-offset:4px}.ds-method p{margin:10px 0 0 40px;color:#c3d9ca;font-size:.9375rem;line-height:1.65}"
+    },
     {
       "name":"Primary Button","kind":"button","refersTo":"button-primary","description":"Main action on light surfaces.",
       "html":"<button class=\"ds-primary\">Tell us what you need</button>",
@@ -80,10 +118,10 @@
   ],
   "narrative": {
     "northStar":"The Apps Garden",
-    "overview":"Clear, calm, approachable, and professional. Generous space, green accents, and readable typography give practical information room to breathe. Components are approachable and restrained: pill buttons, softly rounded cards, and clear outlined fields.\n\nThis records the incumbent implementation, not a redesign. Sources are the shared visual-system layer in `css/production.css` and the later overrides in `css/responsive-overrides.css`. Legacy article utilities are not a second design direction. The site-wide refinement was browser-checked at mobile, intermediate, and desktop widths, including localized interactions and reduced motion.",
-    "keyCharacteristics":["Green accents on white and pale-green surfaces.","Spacious layouts with strong typographic hierarchy.","Mostly flat surfaces, with selective visual and navigation shadows."],
+    "overview":"Clear, calm, approachable, and professional. Generous space, green accents, and readable typography give practical information room to breathe. Components are approachable and restrained: pill buttons, softly rounded cards, and clear outlined fields.\n\nThe homepages now use the user-approved botanical demo: full-width forest-green fields, tactile editorial artwork, lighter grotesk headings and a warm cream team section. This is a homepage-only rollout; secondary pages keep the established shared system. New homepage tokens are explicitly prefixed so the two scopes are not accidentally mixed.\n\nSources are the shared visual-system layer and scoped homepage layer in `css/production.css`, followed by `css/responsive-overrides.css`. The root and ES/EN/CA homepages were browser-checked at 320, 390, 768, 1024 and 1440px, with native navigation, mocked contact submission, reduced motion and no JavaScript. Legacy article utilities are not a separate design direction.",
+    "keyCharacteristics":["Green accents on white and pale-green surfaces; forest-green fields and cream on the homepages.","Spacious layouts with strong typographic hierarchy, lighter Hanken Grotesk on the homepages.","Mostly flat surfaces, with selective visual and navigation shadows.","Existing tactile artwork and complete portraits, not generic decorative UI."],
     "rules":[],
-    "dos":["**Do** reuse the shared green roles, typography, and responsive spacing.","**Do** retain visible keyboard focus and reduced-motion behavior.","**Do** preserve rounded image clipping and the logo/wordmark relationship."],
+    "dos":["**Do** reuse the shared green roles, typography, and responsive spacing.","**Do** retain visible keyboard focus and reduced-motion behavior.","**Do** preserve rounded image clipping and the logo/wordmark relationship.","**Do** keep the homepage rollout scoped; secondary pages are not silently restyled.","**Do** keep all text and controls usable without motion or JavaScript."],
     "donts":["**Don't** turn illustration-specific colors, gradients, or shadows into default component styling.","**Don't** override the responsive layer with desktop-only assumptions.","**Don't** treat legacy utility styles as a new visual direction."]
   }
 }

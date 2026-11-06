@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 400" fill="none">
+  <!-- Original botanical vector for The Apps Garden homepage; authored for this redesign. -->
+  <defs><linearGradient id="leaf" x1="40" y1="60" x2="190" y2="250" gradientUnits="userSpaceOnUse"><stop stop-color="#a5e5bb"/><stop offset="1" stop-color="#229c78"/></linearGradient></defs>
+  <path d="M120 325c-2-55 17-74 8-122S103 130 129 49" stroke="#8ad6af" stroke-width="3" stroke-linecap="round"/>
+  <path d="M126 260c-41-2-68-24-72-58 39-2 68 18 72 58Z" fill="url(#leaf)" stroke="#94d7ae"/>
+  <path d="M127 235c39 0 69-22 77-55-42-5-72 16-77 55Z" fill="url(#leaf)" stroke="#94d7ae"/>
+  <path d="M124 179c-38-5-62-29-64-62 36 0 61 23 64 62Z" fill="url(#leaf)" stroke="#94d7ae"/>
+  <path d="M117 154c38 0 66-23 72-54-37-3-66 18-72 54Z" fill="url(#leaf)" stroke="#94d7ae"/>
+  <path d="M120 99C85 95 62 71 62 39c36 1 57 24 58 60Z" fill="url(#leaf)" stroke="#94d7ae"/>
+  <path d="m69 49 49 48m58 15-57 41m-48-24 51 47m69 16-61 41m-64-19 58 44" stroke="#c4ebcf" stroke-opacity=".45" stroke-linecap="round"/>
+  <path d="M66 326h108l-19 63H85l-19-63Z" fill="#123a2e" stroke="#91dbb4" stroke-width="3" stroke-linejoin="round"/>
+</svg>

@@ -1,11 +1,12 @@
 # Reusable editorial media
 
-The bitmap illustrations were generated with the built-in ImageGen tool and exported to WebP. The current homepage hero is a code-native animation: independent paper cards enter as scattered tasks and leave as clear outcomes. It uses the same forest-green, warm-paper, and mint palette as the editorial images. The 1254 × 1254 pixel compact edit remains available for static reuse. None of the bitmap images has embedded language-specific text. The eight SVG icons are hand-authored in the site's green palette and scale without loss.
+The bitmap illustrations were generated with the built-in ImageGen tool and exported to WebP. The redesigned homepage reuses the original wide `process-to-progress.webp` as full-bleed artwork, with a CSS contrast overlay behind real HTML copy. Below it, readable task pairs resolve on scroll. The cinematic controller reuses the botanical vector's paths as an inline SVG for real stem drawing and leaf growth, while the external SVG remains the static fallback. Flowing forest fields are original procedural WebGL, not new raster assets. No bitmap was generated, cropped from the demo video, or modified for this redesign. The original prompts and existing team source records remain the provenance for reused files. The 1254 × 1254 pixel compact edit remains available for static reuse. None of the bitmap images has embedded language-specific text. The eight SVG icons are hand-authored in the site's green palette and scale without loss.
 
 | File | Suggested reuse |
 | --- | --- |
 | `process-to-progress-compact.webp` | Static process overview or social preview alternative |
-| `process-to-progress.webp` | Original wide process overview and social preview |
+| `process-to-progress.webp` | Full-width homepage hero and social preview |
+| `method-growth.svg` | Original hand-authored botanical vector; static fallback for the homepage's stroke-drawn stem and individually growing leaves |
 | `process-discovery.webp` | Process audit, discovery, diagnosis |
 | `team-handoff.webp` | Onboarding, training, documentation, adoption |
 | `meeting-followup.webp` | Sales meeting, notes, follow-up workflow |
@@ -21,7 +22,7 @@ The bitmap illustrations were generated with the built-in ImageGen tool and expo
 | `icon-workshop.svg` | Collaborative opportunity workshop |
 | `icon-training.svg` | Practical team training |
 
-The homepage service cards use `discover`, `prioritize`, and `design-activate`. The four process steps use `discover`, `design`, `launch`, and `handoff`. The services cards use `workshop`, `discover`, `launch`, and `training`. Keep these semantic pairings when translating headings; choose an icon for its meaning rather than its position in a sequence.
+The retained legacy service-card patterns use `discover`, `prioritize`, and `design-activate`; legacy process steps use `discover`, `design`, `launch`, and `handoff`. The redesigned homepages use open service rows and the botanical method vector instead. Services-page icon patterns use `workshop`, `discover`, `launch`, and `training`. Keep these semantic pairings when translating headings; choose an icon for its meaning rather than its position in a sequence.
 
 The three product pages use the matching square WebP illustrations above. Their generation prompts are recorded in [`product-illustrations.prompt.md`](product-illustrations.prompt.md). The earlier package PNG and two SVG mockups remain available as source concepts, but are no longer displayed on the product pages.
 
@@ -29,7 +30,7 @@ Use `media-icon` for decorative icons beside headings, with `alt=""` and `aria-h
 
 ## ImageGen prompts
 
-The original prompt is in `process-to-progress.prompt.md`; the current hero edit prompt is in `process-to-progress-compact.prompt.md`. The companion images used `process-to-progress.webp` as a **style reference only**.
+The wide homepage hero's original prompt is in `process-to-progress.prompt.md`; the alternative compact edit prompt is in `process-to-progress-compact.prompt.md`. The companion images used `process-to-progress.webp` as a **style reference only**.
 
 ### `process-discovery.webp`
 

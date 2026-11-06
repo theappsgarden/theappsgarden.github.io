@@ -129,7 +129,21 @@ for page in pages.values():
 for folder in ('es', 'en', 'cat'):
     landing = pages[ROOT / folder / 'index.html']
     section_ids = [attrs.get('id') for attrs in landing.attrs('section')]
-    check(section_ids == [None, 'process', 'why-us', 'contact'], landing, 'landing must stay focused')
+    check(section_ids == [None, 'why-us', 'process', None, 'examples', None,
+                          'services', 'products', 'team', 'faq', 'contact'],
+          landing, 'homepage story sections are missing or out of order')
+    for class_name, expected_count in (('method-step', 4), ('task-row', 5),
+                                       ('home-case', 4), ('home-service', 4),
+                                       ('home-product', 3), ('home-person', 4)):
+        actual_count = sum(class_name in attrs.get('class', '').split()
+                           for _, attrs in landing.elements)
+        check(actual_count == expected_count, landing, f'expected {expected_count} {class_name} elements')
+    check(any(a.get('class') == 'home-case-notice' for a in landing.attrs('p')),
+          landing, 'illustrative figures need their visible disclaimer')
+    landing_scripts = [local_target(landing, attrs['src'])[0] for attrs in landing.attrs('script')
+                       if 'src' in attrs]
+    check(ROOT / 'js/homepage-motion.js' in landing_scripts, landing,
+          'homepage needs its shared cinematic motion controller')
     check(len(landing.attrs('form')) == 1, landing, 'landing needs contact form')
     check(any(a.get('name') == 'email' and a.get('type') == 'email' and 'required' in a
               for a in landing.attrs('input')), landing, 'contact needs reply email')
