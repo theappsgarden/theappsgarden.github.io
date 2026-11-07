@@ -1,3 +1,5 @@
+/* Legacy responsive rules must not bleed into the proposal's timeline, cards or type. */
+@scope (:root) to (.proposal-site) {
 /* Use-case library */
 .site .cases-page .page-hero { padding-block: 72px 36px; background: #fff; border: 0; }
 .site .cases-page .page-hero h1 { font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 16px; }
@@ -570,4 +572,37 @@ html:has(body.site) { font-size: 16px; scroll-padding-top: 28px; }
   .site.home-page.home-cinematics .home-type-caret { display: none!important; }
   .site.home-page.home-cinematics .home-hero-art, .site.home-page.home-cinematics .home-hero-copy, .site.home-page.home-cinematics .home-descriptor, .site.home-page.home-cinematics .home-hero .hero-copy, .site.home-page.home-cinematics .home-hero .actions, .site.home-page.home-cinematics .header-inner { animation: none!important; opacity: 1!important; transform: none!important; }
   .site.home-page.home-cinematics .home-case-grid { transition: none!important; }
+}
+
+} /* End legacy scope. */
+
+/* Proposal B: native sticky story and complete static fallbacks. */
+html:has(body.proposal-site) { font-size: 16px; line-height: normal; scroll-padding-top: 0; }
+body.proposal-site { scrollbar-color: #285946 #eaf4ee; }
+body.proposal-site:not(.proposal-enhanced) .cab { position: absolute; }
+body.proposal-site ::selection { background: #7ce2a6; color: #102b25; }
+body.proposal-site input, body.proposal-site textarea { caret-color: #7ce2a6; }
+body.proposal-site [id] { scroll-margin-top: 100px; }
+body.proposal-site h1, body.proposal-site h2, body.proposal-site h3 { color: inherit; }
+body.proposal-site .pie h2 { color: #fff; }
+body.proposal-site .metodo__pasos p { max-height: none; opacity: 1; margin-top: 8px; color: var(--claro); }
+body.proposal-site.method-pinned .metodo { min-height: 360svh; overflow: visible; }
+body.proposal-site.method-pinned .metodo__fijo { position: sticky; top: 0; }
+body.proposal-site.method-pinned .metodo__pasos li:not(.is-on) p { max-height: 0; opacity: 0; margin-top: 0; }
+body.proposal-site:not(.motion-active) .caso__mas { max-height: none; opacity: 1; }
+@media (min-width: 961px) {
+  body.site.proposal-site.motion-active .caso .caso__boton { display: block; bottom: auto; height: 250px; }
+  body.proposal-site .caso__boton:focus-visible { outline-offset: -5px; }
+}
+body.proposal-site:not(.motion-active) .caso__boton { display: none; }
+body.proposal-site .aviso { border-left-width: 1px; }
+@media (max-width: 960px) {
+  body.proposal-site .caso__mas { max-height: none; opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.proposal-site .ch { opacity: 1; }
+  body.proposal-site .ch.cur::after { display: none; }
+  body.proposal-site .planta__tallo { stroke-dashoffset: 0 !important; }
+  body.proposal-site .planta__hoja { transform: none !important; }
+  body.proposal-site .planta__semillas { visibility: hidden; }
 }

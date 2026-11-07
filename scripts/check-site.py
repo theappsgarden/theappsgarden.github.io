@@ -82,7 +82,9 @@ for page in pages.values():
     lang = page.attrs('html')[0]['lang']
     folder = {'es': 'es', 'en': 'en', 'ca': 'cat'}[lang]
     expected = [ROOT / folder / name for name in ('about.html', 'services.html', 'products.html')]
-    for pattern in (r'<nav class="desktop-nav".*?</div><details', r'<details class="mobile-menu".*?</details>'):
+    proposal = 'proposal-site' in page.attrs('body')[0].get('class', '').split()
+    nav_pattern = r'<nav class="cab__menu".*?</nav>' if proposal else r'<nav class="desktop-nav".*?</div><details'
+    for pattern in (nav_pattern, r'<details class="mobile-menu".*?</details>'):
         match = re.search(pattern, text, re.S)
         check(bool(match), page, 'missing shared navigation')
         if not match:
@@ -91,13 +93,30 @@ for page in pages.values():
         links = nav.attrs('a')
         actual = [local_target(page, a['href'])[0] for a in links[:3]]
         check(actual == expected, page, 'inconsistent navigation order or destination')
-        contact = [a for a in links if 'btn' in a.get('class', '').split()]
+        contact = [a for a in links if {'btn', 'boton'} & set(a.get('class', '').split())]
+        # Proposal desktop CTA is a sibling of its navigation.
+        if proposal and pattern == nav_pattern:
+            contact = [a for a in page.attrs('a') if 'cab__cta' in a.get('class', '').split()]
         check(len(contact) == 1 and local_target(page, contact[0]['href']) ==
               ((page.path if page.path == ROOT / 'index.html' else ROOT / folder / 'index.html'), 'contact'),
               page, 'header contact must lead to the localized landing form')
     footer = text.split('<footer', 1)[1]
-    check(f'/{folder}/about.html' in footer or f'"{folder}/about.html' in footer,
-          page, 'footer missing About link')
+    footer_links = Page(page.path, footer).attrs('a')
+    check(any(local_target(page, a.get('href', ''))[0] == ROOT / folder / 'about.html'
+              for a in footer_links), page, 'footer missing About link')
+    if proposal:
+        check(not any('noindex' in a.get('content', '') for a in page.attrs('meta')),
+              page, 'production pages must be indexable')
+        check('/propuesta-b/' not in text, page, 'preview URL left in production page')
+        for meta in page.attrs('meta'):
+            if meta.get('property') == 'og:image':
+                image = urlsplit(meta.get('content', ''))
+                check(image.netloc == 'theappsgarden.com' and
+                      (ROOT / image.path.lstrip('/')).is_file(),
+                      page, 'social preview image must exist on production host')
+        canonical = [a for a in page.attrs('link') if a.get('rel') == 'canonical']
+        check(len(canonical) == 1 and canonical[0].get('href', '').startswith('https://theappsgarden.com/'),
+              page, 'production canonical missing')
 
     for attrs in page.attrs('input') + page.attrs('textarea') + page.attrs('select'):
         if attrs.get('type') != 'hidden':
@@ -129,20 +148,19 @@ for page in pages.values():
 for folder in ('es', 'en', 'cat'):
     landing = pages[ROOT / folder / 'index.html']
     section_ids = [attrs.get('id') for attrs in landing.attrs('section')]
-    check(section_ids == [None, 'why-us', 'process', None, 'examples', None,
-                          'services', 'products', 'team', 'faq', 'contact'],
+    check(section_ids == [None, None, 'process', 'transforma', 'ejemplos', None,
+                          'servicios', 'productos', 'equipo', 'faq', 'contact'],
           landing, 'homepage story sections are missing or out of order')
-    for class_name, expected_count in (('method-step', 4), ('task-row', 5),
-                                       ('home-case', 4), ('home-service', 4),
-                                       ('home-product', 3), ('home-person', 4)):
+    for class_name, expected_count in (('numero', 4), ('fila', 5),
+                                       ('caso', 4), ('producto', 3)):
         actual_count = sum(class_name in attrs.get('class', '').split()
                            for _, attrs in landing.elements)
         check(actual_count == expected_count, landing, f'expected {expected_count} {class_name} elements')
-    check(any(a.get('class') == 'home-case-notice' for a in landing.attrs('p')),
+    check(any(a.get('class') == 'aviso' for a in landing.attrs('p')),
           landing, 'illustrative figures need their visible disclaimer')
     landing_scripts = [local_target(landing, attrs['src'])[0] for attrs in landing.attrs('script')
                        if 'src' in attrs]
-    check(ROOT / 'js/homepage-motion.js' in landing_scripts, landing,
+    check(ROOT / 'js/proposal-motion.js' in landing_scripts, landing,
           'homepage needs its shared cinematic motion controller')
     check(len(landing.attrs('form')) == 1, landing, 'landing needs contact form')
     check(any(a.get('name') == 'email' and a.get('type') == 'email' and 'required' in a
@@ -176,7 +194,8 @@ for folder in ('es', 'en', 'cat'):
 # Root and Spanish landing content must stay in sync, allowing relative-path depth.
 root_text = (ROOT / 'index.html').read_text().split('<main', 1)[1].split('</main>')[0]
 es_text = (ROOT / 'es/index.html').read_text().split('<main', 1)[1].split('</main>')[0]
-check(root_text == es_text.replace('../', ''), pages[ROOT / 'index.html'], 'Spanish landing content drift')
+check(root_text.replace('href="es/', 'href="') == es_text.replace('../', ''),
+      pages[ROOT / 'index.html'], 'Spanish landing content drift')
 
 for location in ET.parse(ROOT / 'sitemap.xml').getroot().iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc'):
     path = ROOT / urlsplit(location.text).path.lstrip('/')
