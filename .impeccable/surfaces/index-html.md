@@ -2,37 +2,35 @@
 version: 1
 slug: "index-html"
 primary_target: "index.html"
-related_targets: ["es/index.html","en/index.html","cat/index.html"]
+related_targets: ["es/index.html", "en/index.html", "cat/index.html", "es/about.html", "en/about.html", "cat/about.html", "es/services.html", "en/services.html", "cat/services.html", "es/products.html", "en/products.html", "cat/products.html"]
 ---
 
-# Homepage
+# Proposal B rollout
 
-Mode: Persuade. Targets: root Spanish and ES/EN/CA homepages only.
-Audience: business owners and teams deciding how to put AI into everyday work. Primary action: the existing introductory-call request form.
-Authority: user-approved `video_design_website.mp4` demo; Fluency Labs supports the pacing, not its palette or claims. Code-led implementation using existing local artwork; no image generation is available. No new direction round: the user explicitly approved matching this demo.
+Mode: Persuade for homepages; Read/Persuade for the supplied interiors.
+Authority: the user's supplied `~/Downloads/propuesta-b-the-apps-garden/web/` and accompanying proposal documentation. The request explicitly replaces the previous homepage-only demo direction and extends the supplied system to all 37 proposal pages. Existing blog routes are retained outside this rollout.
 
 ## Direction contract
 
-THESIS: Scattered work becomes useful, human-reviewed results. Replace the boxed hero and feature-card grid with the demo’s full-width, botanical, scroll-led story.
+THESIS: Put the supplied Proposal B into the actual static site, not into a separate preview folder. Preserve the independent consultancy's product truth, service terms, languages, and existing URLs.
 
-OWN-WORLD: Forest green fields, white editorial sections, one warm cream team section. Light grotesk headings, modest pill actions, fine separators, tactile existing illustrations and intact portraits.
+OWN-WORLD: Inter variable display at 340 weight, forest fields, mint accents, white editorial sections, cream team section, local tactile images and complete portraits. Shared rules remain in production.css; responsive/native-story fixes in responsive-overrides.css. Scope the replacement to proposal-site bodies so blog layouts remain intact.
 
-STORY: Recognize repetitive work, understand the independent method, see illustrative opportunities, inspect services and people, then request a conversation. Keep all prior homepage claims and link to the existing detailed pages. Estimates remain visibly hypothetical.
+STORY: Explain the practical value of AI, show the independent method and task transformations, label hypothetical use cases, present services/products/people, and offer the existing introductory-call form.
 
-FIRST VIEWPORT: Edge-to-edge green artwork; dark overlay behind left-aligned light heading, copy and two actions. White brand and compact navigation sit above, with language access retained. The plant and organized stack dominate the right.
+FIRST VIEWPORT: Full-viewport forest artwork, white compact navigation, a large left-aligned light heading and two pill actions. On mobile, the artwork sits above text rather than behind it.
 
-FORM: User-pinned demo, first and only approved direction; seed: none (user-pinned). Signature interaction: scrolling through the four-step method grows a plant and advances the explanatory accordion. Task rows resolve from inputs to outputs. Scroll remains native, keyboard operation and reduced-motion/static fallbacks remain complete.
+FORM: User-pinned complete HTML/CSS proposal; seed: none (user-pinned). Native scroll grows the botanical SVG after its two logo seeds descend, advances four method explanations, and resolves tasks. Case panels expand independently from their navigation links. No new dependencies, build step, wheel interception or scroll hijacking. Reduced motion and no-JS expose all explanations and links. Remove the preview's noindex and preview URLs; preserve contact/consent code and existing imagery.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
 
-Constraints: plain HTML/CSS/dependency-free JS, no build system, no secondary-page redesign, retain contact/consent behavior, local paths and localized copy. Reuse existing images unchanged, retaining their source documentation.
+## Verification
 
-## Motion revision — user feedback
-
-The user approved the layout but explicitly rejected the missing reference motion. The new review must judge motion in progress, not just settled screenshots.
-
-- Focal moment: the botanical system comes alive. The logo's two chevrons drop into the pot before the stem and leaves grow. The illustration is vertically centered with the desktop method copy and steps; tasks visibly travel into reviewed results.
-- Continuity: headings type on entry with a transient caret; figures count to their existing localized estimates; desktop use-case panels expand to reveal the selected example. Native links and keyboard access remain distinct from expansion controls.
-- Background: original procedural WebGL folds on the hero and forest fields, with gentle mouse interaction. Existing images remain unchanged. One shared renderer, capped at one-third resolution, 640 × 480px and 30fps, only while visible. No background pause/resume buttons are shown, per the user's follow-up request.
-- Feedback: animated disclosure content, image arrivals, navigation corner strokes and button states support the primary narrative rather than animate every text block alike.
-- Budget and fallbacks: no dependency, scroll hijack or new commercial claims. No-JS remains fully readable. Reduced motion immediately completes text/counters and removes spatial/background motion. Offscreen and hidden-tab work stops; unavailable WebGL leaves the original forest field intact. Mobile retains its approved static layout with bounded entry sequences, not pinned scrolling.
+- Static validation covers 51 retained pages, links, assets, forms and sitemap.
+- Browser coverage: all 37 supplied pages in desktop, mobile, reduced-motion and no-JS modes; localized mocked contact submissions, case expansion, live preference changes, mobile menu, and 320px overflow.
+- Original rollout evidence: `.impeccable/review/proposal-b/`.
+- Fidelity correction after user feedback: `.impeccable/review/proposal-b-fidelity/` includes paired proposal/current Services desktop/mobile captures, live typewriter and phase-progress states, homepage, Products and About.
+- `scripts/check-proposal-fidelity.cjs` compares all 37 pages against the served proposal at desktop/mobile sizes (74 pairs): main DOM copy, computed type/layout and element geometry. Eight representative routes also compare animated heading coverage and verify completion/reduced-motion transitions.
+- Legacy styles are excluded from proposal bodies through CSS scope boundaries, not just overwritten piecemeal. Restore all source text-reveal selectors, preparation-before-entry, trigger positions, delay, final caret hold, supporting-block stagger and Services rail progression.
+- No new shipping raster: proposal images match the existing local assets byte-for-byte; prior provenance is retained.
+- Known external follow-ups from the proposal documentation: company legal/privacy/cookie pages need real business details; the Chatbase greeting language is configured externally; questionnaire timing needs business review. None is silently invented here.

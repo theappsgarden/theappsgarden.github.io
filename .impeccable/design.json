@@ -1,127 +1,70 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-06T21:00:00Z",
+  "generatedAt": "2026-11-07T14:00:00Z",
   "title": "Design System: The Apps Garden",
   "extensions": {
     "colorMeta": {
-      "home-forest":{"role":"primary","displayName":"Homepage Forest","tonalRamp":["oklch(15% .02 162)","oklch(27% .035 162)","oklch(39% .05 162)","oklch(51% .07 162)","oklch(63% .07 162)","oklch(75% .05 162)","oklch(87% .025 162)","oklch(95% .01 162)"]},
-      "home-cream":{"role":"neutral","displayName":"Team Cream","tonalRamp":["oklch(15% .01 90)","oklch(27% .02 90)","oklch(39% .025 90)","oklch(51% .03 90)","oklch(63% .035 90)","oklch(75% .03 90)","oklch(87% .025 90)","oklch(95% .015 90)"]},
-      "task-sage":{"role":"neutral","displayName":"Reviewed Outcome","tonalRamp":["oklch(15% .01 150)","oklch(27% .02 150)","oklch(39% .03 150)","oklch(51% .04 150)","oklch(63% .04 150)","oklch(75% .035 150)","oklch(87% .025 150)","oklch(95% .01 150)"]},
-      "green": {"role":"primary","displayName":"Garden Green","tonalRamp":["oklch(15% .02 173)","oklch(27% .04 173)","oklch(39% .07 173)","oklch(51% .09 173)","oklch(63% .10 173)","oklch(75% .08 173)","oklch(87% .04 173)","oklch(95% .015 173)"]},
-      "green-deep": {"role":"primary","displayName":"Deep Evergreen","tonalRamp":["oklch(15% .02 174)","oklch(27% .04 174)","oklch(39% .06 174)","oklch(51% .08 174)","oklch(63% .09 174)","oklch(75% .07 174)","oklch(87% .035 174)","oklch(95% .01 174)"]},
-      "green-hover": {"role":"primary","displayName":"Evergreen Hover","tonalRamp":["oklch(15% .02 173)","oklch(27% .035 173)","oklch(39% .05 173)","oklch(51% .065 173)","oklch(63% .07 173)","oklch(75% .05 173)","oklch(87% .03 173)","oklch(95% .01 173)"]},
-      "ink": {"role":"neutral","displayName":"Green Ink","tonalRamp":["oklch(15% .01 168)","oklch(27% .02 168)","oklch(39% .025 168)","oklch(51% .03 168)","oklch(63% .03 168)","oklch(75% .02 168)","oklch(87% .01 168)","oklch(95% .005 168)"]},
-      "muted": {"role":"neutral","displayName":"Muted Green","tonalRamp":["oklch(15% .01 164)","oklch(27% .02 164)","oklch(39% .025 164)","oklch(51% .03 164)","oklch(63% .03 164)","oklch(75% .02 164)","oklch(87% .01 164)","oklch(95% .005 164)"]},
-      "line": {"role":"neutral","displayName":"Soft Green Border","tonalRamp":["oklch(15% .005 158)","oklch(27% .01 158)","oklch(39% .015 158)","oklch(51% .02 158)","oklch(63% .02 158)","oklch(75% .015 158)","oklch(87% .01 158)","oklch(95% .005 158)"]},
-      "surface": {"role":"neutral","displayName":"Soft Section","tonalRamp":["oklch(15% .003 158)","oklch(27% .005 158)","oklch(39% .007 158)","oklch(51% .01 158)","oklch(63% .01 158)","oklch(75% .007 158)","oklch(87% .005 158)","oklch(95% .003 158)"]},
-      "white": {"role":"neutral","displayName":"White Canvas","tonalRamp":["oklch(15% 0 0)","oklch(27% 0 0)","oklch(39% 0 0)","oklch(51% 0 0)","oklch(63% 0 0)","oklch(75% 0 0)","oklch(87% 0 0)","oklch(95% 0 0)"]},
-      "dark": {"role":"neutral","displayName":"Deep Green Surface","tonalRamp":["oklch(15% .015 171)","oklch(27% .03 171)","oklch(39% .04 171)","oklch(51% .05 171)","oklch(63% .05 171)","oklch(75% .035 171)","oklch(87% .02 171)","oklch(95% .005 171)"]},
-      "sage": {"role":"neutral","displayName":"Soft Sage","tonalRamp":["oklch(15% .005 154)","oklch(27% .01 154)","oklch(39% .02 154)","oklch(51% .03 154)","oklch(63% .03 154)","oklch(75% .025 154)","oklch(87% .02 154)","oklch(95% .01 154)"]},
-      "light-button": {"role":"neutral","displayName":"Light Mint Action","tonalRamp":["oklch(15% .01 163)","oklch(27% .02 163)","oklch(39% .03 163)","oklch(51% .04 163)","oklch(63% .04 163)","oklch(75% .035 163)","oklch(87% .025 163)","oklch(95% .01 163)"]},
-      "outline": {"role":"neutral","displayName":"Outline Green","tonalRamp":["oklch(15% .005 157)","oklch(27% .01 157)","oklch(39% .02 157)","oklch(51% .025 157)","oklch(63% .025 157)","oklch(75% .02 157)","oklch(87% .015 157)","oklch(95% .005 157)"]},
-      "error": {"role":"error","displayName":"Form Error","tonalRamp":["oklch(15% .025 33)","oklch(27% .06 33)","oklch(39% .10 33)","oklch(51% .13 33)","oklch(63% .13 33)","oklch(75% .09 33)","oklch(87% .04 33)","oklch(95% .015 33)"]}
+      "forest": {"role":"primary","displayName":"Forest Field","tonalRamp":["oklch(15% .02 165)","oklch(27% .035 165)","oklch(39% .05 165)","oklch(51% .07 165)","oklch(63% .07 165)","oklch(75% .05 165)","oklch(87% .025 165)","oklch(95% .01 165)"]},
+      "mint": {"role":"secondary","displayName":"Botanical Mint","tonalRamp":["oklch(15% .02 150)","oklch(27% .04 150)","oklch(39% .07 150)","oklch(51% .1 150)","oklch(63% .12 150)","oklch(75% .12 150)","oklch(87% .08 150)","oklch(95% .025 150)"]},
+      "cream": {"role":"neutral","displayName":"Team Cream","tonalRamp":["oklch(15% .01 90)","oklch(27% .02 90)","oklch(39% .025 90)","oklch(51% .03 90)","oklch(63% .035 90)","oklch(75% .03 90)","oklch(87% .025 90)","oklch(95% .015 90)"]}
     },
     "typographyMeta": {
-      "display":{"displayName":"Homepage Display","purpose":"Self-hosted Hanken Grotesk, 400 weight; full-width botanical hero only."},
-      "home-headline":{"displayName":"Homepage Heading","purpose":"Light, open section headings on the redesigned landing pages."},
-      "home-body":{"displayName":"Homepage Body","purpose":"Hanken Grotesk supporting text; secondary pages keep Inter."},
-      "home-title":{"displayName":"Homepage Title","purpose":"Medium-weight product and service titles."},
-      "page-title":{"displayName":"Page Title","purpose":"Shared secondary-page titles; homepage display remains distinct."},
-      "headline":{"displayName":"Section Heading","purpose":"Shared section headings, consistently scaled across Services and other marketing pages."},
-      "title":{"displayName":"Card Title","purpose":"Shared third-level headings."},
-      "body":{"displayName":"Body","purpose":"Default shared text."},
-      "label":{"displayName":"Eyebrow","purpose":"Uppercase section labels."},
-      "introduction":{"displayName":"Legacy Introduction","purpose":"Retained legacy layout role; redesigned homepage hero copy uses its own 1rem size."},
-      "reading":{"displayName":"Reading","purpose":"Article text and mobile introductions."},
-      "utility":{"displayName":"Utility","purpose":"Footer cookie preferences."},
-      "index":{"displayName":"Index","purpose":"Ordered process step numbers."}
+      "display":{"displayName":"Proposal Display","purpose":"Self-hosted variable Inter, light weight, for the supplied botanical homepage."},
+      "headline":{"displayName":"Section Heading","purpose":"Light editorial section titles; inherit section foreground."},
+      "body":{"displayName":"Proposal Body","purpose":"Shared 17px Inter copy across supplied pages."},
+      "index":{"displayName":"Method Index","purpose":"Space Mono for ordered method steps."},
+      "reading":{"displayName":"Legacy Article","purpose":"Retained article reading role, not restyled by the proposal."}
     },
-    "shadows": [
-      {"name":"home-case-hover","value":"0 10px 28px #102e250d","purpose":"Subtle hover lift on illustrative use cases."},
-      {"name":"hero","value":"0 24px 70px rgba(16,43,37,.14)","purpose":"Prominent hero visuals."},
-      {"name":"mobile-menu","value":"0 18px 40px rgba(16,43,37,.12)","purpose":"Floating mobile navigation."}
+    "shadows":[
+      {"name":"mobile-menu","value":"0 24px 60px rgba(16,43,37,.24)","purpose":"Floating disclosure navigation."},
+      {"name":"pricing-hover","value":"0 20px 48px rgba(16,43,37,.1)","purpose":"Interior pricing-card feedback."}
     ],
-    "motion": [
-      {"name":"home-ease","value":"cubic-bezier(.16,1,.3,1)","purpose":"Coordinated homepage intro, plant reveal and media movement."},
-      {"name":"home-plant","value":"scroll-linked SVG strokeDashoffset and leaf transforms","purpose":"The logo's two chevrons drop into the pot before continuous stem drawing and leaf growth; vertically centered on desktop, static full plant on mobile, short windows and reduced motion."},
-      {"name":"home-typewriter","value":"32ms per character, capped at 1450ms","purpose":"Headings type once with one moving DOM caret synchronized to the CSS character clock. Remove it on completion, cancellation, reduced motion or a hidden tab. Whole words and the accessible name remain stable; never create a cursor per character."},
-      {"name":"home-counter","value":"1500ms, quartic ease-out","purpose":"Localized visual figures count to their original values, without moving their units or announcing intermediate digits."},
-      {"name":"home-image-arrival","value":"950ms cubic-bezier(.16,1,.3,1), 75ms sibling stagger","purpose":"A bounded downward, soft-focus arrival for editorial imagery."},
-      {"name":"home-case-expansion","value":"grid-template-columns .7s cubic-bezier(.16,1,.3,1)","purpose":"2.4fr selected case alongside 1fr closed cases above 1100px; native expansion controls remain distinct from navigation."},
-      {"name":"home-current","value":"30fps maximum, one shared WebGL context, 640x480 maximum surface","purpose":"Original flowing forest material; only visible surfaces render. No on-page background controls. Stopped in hidden tabs, absent with reduced motion or unavailable WebGL."},
-      {"name":"home-header","value":"backdrop-filter:blur(14px)","purpose":"Maintain navigation contrast as it crosses light and dark sections."},
-      {"name":"button-color","value":"background .18s ease, border-color .18s ease, color .18s ease","purpose":"Button state changes."},
-      {"name":"media-icon","value":"transform .35s ease","purpose":"Icon hover movement."},
-      {"name":"media-image","value":"transform .6s ease","purpose":"Image hover scaling."},
-      {"name":"reduced-motion","value":".01ms","purpose":"Reduced transition and animation durations; workflow outcomes are static."}
+    "motion":[
+      {"name":"entry","value":"850ms quartic ease-out; 90ms batch stagger; top 91% viewport trigger","purpose":"Reference supporting-block entrances, including interior paragraphs, tables, cards and lists; readable static defaults."},
+      {"name":"typewriter","value":"9–26ms per character; 250ms interior/350ms homepage hero delay; 900ms final caret hold","purpose":"Whole-word spans prepared before entry; source-matched interior and homepage heading coverage, with stable accessible names."},
+      {"name":"counter","value":"1500ms cubic ease-out","purpose":"Visual-only localized counting to original final values."},
+      {"name":"case-expansion","value":"flex-grow .6s cubic-bezier(.65,0,.2,1)","purpose":"Expand the selected desktop example without replacing its link."},
+      {"name":"plant","value":"native scroll progress over a 360svh section","purpose":"Logo seeds descend, stem draws and attached leaves grow; static fallback for reduced motion and small screens."}
     ],
-    "breakpoints": [
-      {"name":"home-team-stack","value":"1200px"},
-      {"name":"home-short-window","value":"680px height"},
-      {"name":"home-expanding-cases","value":"1100px"},
-      {"name":"team-tablet","value":"1000px"},
-      {"name":"tablet","value":"900px"},
-      {"name":"mobile","value":"640px"}
+    "breakpoints":[
+      {"name":"desktop-story","value":"961px width and 640px height"},
+      {"name":"navigation","value":"900px"},
+      {"name":"hero-image-stack","value":"760px"}
     ]
   },
-  "components": [
+  "components":[
     {
-      "name":"Homepage White Action","kind":"button","refersTo":"home-button","description":"Primary action on the homepage's forest fields.",
-      "html":"<div class=\"ds-home-ground\"><button class=\"ds-home-action\">Let’s talk about your business</button></div>",
-      "css":".ds-home-ground{padding:24px;background:#102e25}.ds-home-action{display:inline-flex;align-items:center;min-height:48px;padding:13px 23px;border:1px solid #fff;border-radius:999px;background:#fff;color:#102e25;font:500 .875rem/1.3 'Hanken Grotesk','Helvetica Neue',sans-serif;cursor:pointer;transition:background .18s ease}.ds-home-action:hover{background:#dceee0;border-color:#dceee0}.ds-home-action:focus-visible{outline:3px solid #a9e3bc;outline-offset:4px}"
+      "name":"Forest Action","kind":"button","refersTo":"button-light","description":"White primary action on a forest field.",
+      "html":"<div class=\"ds-forest\"><button class=\"ds-light\">Let’s talk about your business</button></div>",
+      "css":".ds-forest{padding:24px;background:#102b25}.ds-light{min-height:52px;padding:12px 26px;border:1px solid transparent;border-radius:999px;background:#fff;color:#102b25;font:550 .98rem/1.2 Inter,sans-serif;cursor:pointer;transition:background .25s,transform .25s}.ds-light:hover{background:#7ce2a6;transform:translateY(-2px)}.ds-light:focus-visible{outline:3px solid #7ce2a6;outline-offset:3px}"
     },
     {
-      "name":"Homepage Dark Field","kind":"input","refersTo":"home-field","description":"Readable contact field on forest, with a visible boundary and mint focus.",
-      "html":"<div class=\"ds-home-field\"><label for=\"ds-home-email\">Email</label><input id=\"ds-home-email\" type=\"email\" autocomplete=\"email\"></div>",
-      "css":".ds-home-field{padding:24px;background:#102e25;color:#e0ece3;font:400 16px/1.55 'Hanken Grotesk',sans-serif}.ds-home-field label{display:block;font-size:.875rem;margin-bottom:8px}.ds-home-field input{box-sizing:border-box;width:100%;min-height:48px;padding:12px;background:#ffffff08;border:1px solid #6f8d7e;border-radius:3px;color:#fff;font:inherit;caret-color:#b3dfbf}.ds-home-field input:hover{border-color:#c8e1d0}.ds-home-field input:focus-visible{outline:3px solid #a9e3bc;outline-offset:3px}.ds-home-field input[aria-invalid=true]{border-color:#ffd0ba;color:#ffd0ba}"
+      "name":"Solid Action","kind":"button","refersTo":"button-primary","description":"Green action on a light field.",
+      "html":"<button class=\"ds-solid\">Request a conversation</button>",
+      "css":".ds-solid{min-height:52px;padding:12px 26px;border:1px solid transparent;border-radius:999px;background:#006b59;color:#fff;font:550 .98rem/1.2 Inter,sans-serif;cursor:pointer;transition:background .25s,transform .25s}.ds-solid:hover{background:#102b25;transform:translateY(-2px)}.ds-solid:focus-visible{outline:3px solid #7ce2a6;outline-offset:3px}"
     },
     {
-      "name":"Task Transformation","kind":"custom","refersTo":"task-output","description":"Always-readable input and reviewed-output pair.",
-      "html":"<div class=\"ds-task\"><span class=\"ds-task-input\">Scattered notes</span><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-5-5 5 5-5 5\" stroke=\"#007e68\" stroke-width=\"1.5\"/></svg><span class=\"ds-task-output\">Summary and actions</span></div>",
-      "css":".ds-task{display:grid;grid-template-columns:1fr 24px 1.1fr;gap:10px;align-items:center;font:400 .8125rem/1.4 'Hanken Grotesk',sans-serif}.ds-task-input,.ds-task-output{padding:16px 18px;min-height:32px;border-radius:10px}.ds-task-input{background:#f7f3e7;color:#596050}.ds-task-output{background:#d8ebde;color:#173f2c;font-weight:500}"
+      "name":"Ghost Action","kind":"button","refersTo":"button-ghost","description":"Outlined companion action on forest.",
+      "html":"<div class=\"ds-ground\"><a class=\"ds-ghost\" href=\"#process\">See how we work</a></div>",
+      "css":".ds-ground{padding:24px;background:#102b25}.ds-ghost{display:inline-flex;align-items:center;min-height:52px;box-sizing:border-box;padding:12px 26px;border:1px solid #ffffff8c;border-radius:999px;background:transparent;color:#fff;text-decoration:none;font:550 .98rem/1.2 Inter,sans-serif;transition:background .25s}.ds-ghost:hover{background:#ffffff1f;border-color:#fff}.ds-ghost:focus-visible{outline:3px solid #7ce2a6;outline-offset:3px}"
     },
     {
-      "name":"Homepage Method Disclosure","kind":"custom","description":"Native method disclosure; keyboard operation stays native.",
-      "html":"<div class=\"ds-method-ground\"><details class=\"ds-method\" open><summary><span>01</span>We listen</summary><p>We talk to your team to understand where time goes, what gets repeated and what is getting in the way.</p></details></div>",
-      "css":".ds-method-ground{padding:24px;background:#102e25;font-family:'Hanken Grotesk',sans-serif}.ds-method{border-top:1px solid #b9d6c040;padding:19px 0;color:#ccdfd1}.ds-method summary{display:flex;gap:24px;align-items:center;min-height:44px;list-style:none;cursor:pointer;font-size:1.25rem}.ds-method summary span{font-size:.75rem;color:#a3c4b0}.ds-method summary:hover{color:#fff}.ds-method summary:focus-visible{outline:3px solid #a9e3bc;outline-offset:4px}.ds-method p{margin:10px 0 0 40px;color:#c3d9ca;font-size:.9375rem;line-height:1.65}"
+      "name":"Case Expansion","kind":"card","description":"An illustration-led example with a separate destination link.",
+      "html":"<article class=\"ds-case\"><button class=\"ds-expand\" aria-expanded=\"false\">Explore this example</button><div class=\"ds-case-copy\"><p>Industrial workshop</p><h3>Quotes, invoices and job sheets</h3><a href=\"#example\">View example →</a></div></article>",
+      "css":".ds-case{overflow:hidden;border:1px solid #d7e2dc;border-radius:16px;font-family:Inter,sans-serif}.ds-expand{width:100%;min-height:100px;border:0;background:#102b25;color:#bce2cd;cursor:pointer}.ds-expand:hover{background:#153d32}.ds-expand:focus-visible{outline:3px solid #7ce2a6;outline-offset:-5px}.ds-case-copy{padding:22px;color:#172a25}.ds-case-copy p{color:#51645d}.ds-case-copy h3{font-weight:500}.ds-case-copy a{color:#006b59}.ds-case-copy a:focus-visible{outline:3px solid #007e68;outline-offset:3px}"
     },
     {
-      "name":"Primary Button","kind":"button","refersTo":"button-primary","description":"Main action on light surfaces.",
-      "html":"<button class=\"ds-primary\">Tell us what you need</button>",
-      "css":".ds-primary{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.65rem 1.45rem;font:600 .9rem/1.3 Inter,'Helvetica Neue',Arial,sans-serif;border:1px solid var(--green-deep,#006b59);border-radius:999px;background:var(--green-deep,#006b59);color:#fff;cursor:pointer;transition:background .18s ease,border-color .18s ease,color .18s ease}.ds-primary:hover{background:#005344;border-color:#005344}.ds-primary:focus-visible{outline:3px solid var(--green,#007e68);outline-offset:4px}"
-    },
-    {
-      "name":"Outline Button","kind":"button","refersTo":"button-outline","description":"Secondary action on light surfaces.",
-      "html":"<a class=\"ds-outline\" href=\"#process\">See how we work</a>",
-      "css":".ds-outline{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.65rem 1.45rem;font:600 .9rem/1.3 Inter,'Helvetica Neue',Arial,sans-serif;border:1px solid #b8cac0;border-radius:999px;background:#fff;color:var(--ink,#172a25);text-decoration:none;transition:background .18s ease,border-color .18s ease,color .18s ease}.ds-outline:hover{background:#eaf4ee;border-color:var(--green,#007e68);color:var(--green-deep,#006b59)}.ds-outline:focus-visible{outline:3px solid var(--green,#007e68);outline-offset:4px}"
-    },
-    {
-      "name":"Light Button","kind":"button","refersTo":"button-light","description":"Action on a dark section; preview includes its backdrop.",
-      "html":"<div class=\"ds-backdrop\"><a class=\"ds-light\" href=\"#contact\">Let’s talk</a></div>",
-      "css":".ds-backdrop{padding:24px;background:var(--dark,#102b25)}.ds-light{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.65rem 1.45rem;font:600 .9rem/1.3 Inter,'Helvetica Neue',Arial,sans-serif;border:1px solid #dcf3e9;border-radius:999px;background:#dcf3e9;color:var(--ink,#172a25);text-decoration:none;transition:background .18s ease,border-color .18s ease,color .18s ease}.ds-light:hover{background:#fff;border-color:#fff}.ds-light:focus-visible{outline:3px solid var(--green,#007e68);outline-offset:4px}"
-    },
-    {
-      "name":"Feature Card","kind":"card","refersTo":"feature-card","description":"Flat bordered information card.",
-      "html":"<article class=\"ds-card\"><h3>Your needs come first</h3><p>We recommend tools that fit your team.</p></article>",
-      "css":".ds-card{padding:28px;border:1px solid var(--line,#d7e2dc);border-radius:18px;background:#fff;color:var(--ink,#172a25);font:16px/1.55 Inter,'Helvetica Neue',Arial,sans-serif}.ds-card h3{margin:0 0 16px;font-size:clamp(1.2rem,2vw,1.6rem);font-weight:650;letter-spacing:-.035em;line-height:1.1}.ds-card p{color:var(--muted,#51645d);margin:0}"
-    },
-    {
-      "name":"Contact Field","kind":"input","refersTo":"field","description":"Labeled contact input with keyboard-focus and invalid states.",
-      "html":"<div class=\"ds-field\"><label for=\"ds-company\">Company</label><input id=\"ds-company\" name=\"company\" autocomplete=\"organization\"></div>",
-      "css":".ds-field{font:16px/1.55 Inter,'Helvetica Neue',Arial,sans-serif;color:var(--ink,#172a25)}.ds-field label{display:block;font-weight:600;margin-bottom:8px}.ds-field input{box-sizing:border-box;width:100%;min-height:48px;padding:12px;border:1px solid var(--line,#d7e2dc);border-radius:8px;background:#fff;color:#173e33;font:inherit}.ds-field input:focus-visible{outline:3px solid var(--green,#007e68);outline-offset:3px}.ds-field input[aria-invalid=true]{color:#923525;border-color:#923525}"
-    },
-    {
-      "name":"Desktop Navigation","kind":"nav","description":"Simple semibold links with green current and hover states.",
-      "html":"<nav class=\"ds-nav\" aria-label=\"Example navigation\"><a href=\"#home\" aria-current=\"page\">Home</a><a href=\"#services\">Services</a><a href=\"#products\">Products</a></nav>",
-      "css":".ds-nav{display:flex;align-items:center;flex-wrap:wrap;gap:22px;font-family:Inter,'Helvetica Neue',Arial,sans-serif}.ds-nav a{font-size:.91rem;font-weight:600;color:var(--ink,#172a25);text-decoration:none}.ds-nav a:hover,.ds-nav a[aria-current=page]{color:var(--green,#007e68)}.ds-nav a:focus-visible{outline:3px solid var(--green,#007e68);outline-offset:4px}"
+      "name":"Mobile Navigation","kind":"nav","description":"Native disclosure with localized navigation and contact access.",
+      "html":"<details class=\"ds-menu\"><summary>Menu</summary><nav><a href=\"#about\">About us</a><a href=\"#services\">Services</a><a href=\"#contact\">Get in touch</a></nav></details>",
+      "css":".ds-menu{font:550 .95rem Inter,sans-serif;color:#172a25}.ds-menu summary{display:inline-block;padding:10px 18px;border:1px solid currentColor;border-radius:999px;cursor:pointer}.ds-menu summary:hover{color:#006b59}.ds-menu summary:focus-visible,.ds-menu a:focus-visible{outline:3px solid #007e68;outline-offset:3px}.ds-menu nav{display:grid;gap:4px;max-width:280px;margin-top:10px;padding:14px;border-radius:18px;background:#fff;box-shadow:0 24px 60px #102b253d}.ds-menu a{padding:12px 10px;text-decoration:none;color:inherit;border-radius:10px}.ds-menu a:hover{background:#eaf4ee}"
     }
   ],
-  "narrative": {
+  "narrative":{
     "northStar":"The Apps Garden",
-    "overview":"Clear, calm, approachable, and professional. Generous space, green accents, and readable typography give practical information room to breathe. Components are approachable and restrained: pill buttons, softly rounded cards, and clear outlined fields.\n\nThe homepages now use the user-approved botanical demo: full-width forest-green fields, tactile editorial artwork, lighter grotesk headings and a warm cream team section. This is a homepage-only rollout; secondary pages keep the established shared system. New homepage tokens are explicitly prefixed so the two scopes are not accidentally mixed.\n\nSources are the shared visual-system layer and scoped homepage layer in `css/production.css`, followed by `css/responsive-overrides.css`. The root and ES/EN/CA homepages were browser-checked at 320, 390, 768, 1024 and 1440px, with native navigation, mocked contact submission, reduced motion and no JavaScript. Legacy article utilities are not a separate design direction.",
-    "keyCharacteristics":["Green accents on white and pale-green surfaces; forest-green fields and cream on the homepages.","Spacious layouts with strong typographic hierarchy, lighter Hanken Grotesk on the homepages.","Mostly flat surfaces, with selective visual and navigation shadows.","Existing tactile artwork and complete portraits, not generic decorative UI."],
-    "rules":[],
-    "dos":["**Do** reuse the shared green roles, typography, and responsive spacing.","**Do** retain visible keyboard focus and reduced-motion behavior.","**Do** preserve rounded image clipping and the logo/wordmark relationship.","**Do** keep the homepage rollout scoped; secondary pages are not silently restyled.","**Do** keep all text and controls usable without motion or JavaScript."],
-    "donts":["**Don't** turn illustration-specific colors, gradients, or shadows into default component styling.","**Don't** override the responsive layer with desktop-only assumptions.","**Don't** treat legacy utility styles as a new visual direction."]
+    "overview":"The user-supplied Proposal B is the visual authority for the root and ES/EN/CA homepages and its 33 interior pages. This supersedes the previous homepage-only Hanken Grotesk direction. The build adopts the proposal's composition, Inter typography, forest fields, tactile artwork, spacious editorial rhythm, botanical story and cream team section.",
+    "keyCharacteristics":["Light, tightly tracked Inter headings against forest and white fields.","Existing tactile artwork, complete portraits, mint accents and restrained pill actions.","Scroll-linked botanical explanation with native scrolling and complete static fallbacks.","Shared page system and localized navigation across all supplied interiors."],
+    "rules":[{"name":"The Inherited Contrast Rule","body":"Headings inherit their section's foreground. Legacy global heading colors must not turn text dark on a forest field.","section":"colors"}],
+    "dos":["Do keep replacement CSS scoped to proposal-site pages and reuse shared stylesheet paths.","Do preserve the three localized trees, public URLs, hypothetical-results disclaimer and existing service terms.","Do keep native scrolling, visible focus, complete reduced-motion/no-JS content and working contact fallbacks.","Do reuse the existing local artwork unchanged, retaining its provenance."],
+    "donts":["Don't load the preview's noindex metadata, preview-domain paths or bundled animation libraries in production.","Don't reintroduce fixed desktop scroll choreography on mobile or short screens.","Don't import the old homepage's Hanken/WebGL direction into the approved proposal.","Don't restyle retained blog/article pages accidentally through unscoped replacement selectors."]
   }
 }
