@@ -1,0 +1,55 @@
+# The Apps Garden
+
+> Independent AI consultancy for businesses. We help teams spend less time on repetitive work: we find the tasks worth improving, choose AI tools that fit the team and help put them into practice. The service is fully remote, in Spanish, Catalan and English.
+
+The Apps Garden is not tied to any AI platform: it recommends what fits each business, including tools it does not sell. Every step is reviewed by people, and the client's team keeps control.
+
+## Services and prices
+
+- First meeting: free, 30 minutes. A video call with one or two partners to explain the Study process, timing and pricing. It is not a diagnosis and does not include recommendations.
+- Tailored AI Study: €1,500 for teams of up to 50 people, €3,500 for 51–125 people and €6,000 for 126 people or more. A report to help the business decide, not to collect options. Implementation and Radar follow the Study.
+- Guided implementation: a fixed quote after the Study, with one invoice that includes external suppliers' work. Software licences are bought and paid for by the client. The Study fee is not deducted from the project.
+- AI Radar: €300 a month, €800 for 3 months (saves €100) or €3,000 a year (saves €600). Recommended tools with costs and reasons, alerts on pricing, privacy and availability, and quarterly reports. It requires a completed Study and monitors tools; it does not implement them.
+- AI training: can be booked on its own, for up to 12 people per group, with recording, PDF materials and a certificate. Courses: AI for everyday work, AI for sales, AI for content creation and AI for management.
+
+## Products
+
+- AI-assisted content workflow: drafts and reused ideas prepared with AI from trusted sources; editorial review and decisions stay with the team.
+- AI-assisted product videos: videos that explain a product, show a demo or launch a feature, with creative direction and human review.
+- Agents for LinkedIn presence: AI agents that plan posts, write in the company's voice and spot relevant conversations; the team decides what to publish.
+
+## How we work
+
+Four steps: we listen, we analyse, we recommend and we support. We sign a confidentiality agreement and assess each tool's privacy before recommending it; work examples should not contain sensitive data. The team behind the company has four people, with experience in operations, management, software development and audiovisual production.
+
+The use cases on the site are illustrative examples based on hypothetical organisations: they are not real clients, and their figures are assumptions, not measured results.
+
+## Español
+
+- [Inicio](https://theappsgarden.com/es/index.html): método, servicios con precios, productos y preguntas frecuentes
+- [Servicios](https://theappsgarden.com/es/services.html): Estudio IA, implantación, Radar IA y formación, con precios
+- [Productos](https://theappsgarden.com/es/products.html)
+- [Casos de uso](https://theappsgarden.com/es/use-cases.html): ejemplos ilustrativos
+- [Nosotros](https://theappsgarden.com/es/about.html)
+
+## English
+
+- [Home](https://theappsgarden.com/en/index.html): method, services with prices, products and FAQ
+- [Services](https://theappsgarden.com/en/services.html): AI Study, implementation, AI Radar and training, with prices
+- [Products](https://theappsgarden.com/en/products.html)
+- [Use cases](https://theappsgarden.com/en/use-cases.html): illustrative examples
+- [About us](https://theappsgarden.com/en/about.html)
+
+## Català
+
+- [Inici](https://theappsgarden.com/cat/index.html): mètode, serveis amb preus, productes i preguntes freqüents
+- [Serveis](https://theappsgarden.com/cat/services.html): Estudi d’IA, implantació, Radar IA i formació, amb preus
+- [Productes](https://theappsgarden.com/cat/products.html)
+- [Casos d’ús](https://theappsgarden.com/cat/use-cases.html): exemples il·lustratius
+- [Nosaltres](https://theappsgarden.com/cat/about.html)
+
+## Contact
+
+- Email: team@theappsgarden.com
+- [LinkedIn](https://www.linkedin.com/company/the-apps-garden)
+- [Instagram](https://www.instagram.com/theappsgarden/)
